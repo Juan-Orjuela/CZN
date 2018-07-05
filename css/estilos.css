@@ -1,20 +1,277 @@
 @font-face {
     font-family: 'fira_sanslight';
-    src: url('../fuentes/firasans-light-webfont.woff2') format('woff2'),
-         url('../fuentes/firasans-light-webfont.woff') format('woff');
+    src: url('../fuentes/firasans-light-webfont.woff2') format('woff2'), url('../fuentes/firasans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
 @font-face {
     font-family: 'oswaldregular';
-    src: url('../fuentes/oswald-regular-webfont.woff2') format('woff2'),
-         url('../fuentes/oswald-regular-webfont.woff') format('woff');
+    src: url('../fuentes/oswald-regular-webfont.woff2') format('woff2'), url('../fuentes/oswald-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+/*=======
+=========
+Generales
+=========
+=======*/
+html {
+    font-size: 16px;
+    font-family: 'fira_sanslight';
+}
+
 /*Tipografia*/
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'oswaldregular';
+}
+p {
+    font-family: 'fira_sanslight';
+}
+/*Estructura*/
+#fullwrap {
+    min-height: 100vh;
+}
+
+#fullwrap > .container {
+    padding: 0;
+    min-height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    z-index:2;
+    position: relative;;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1650px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Lineas*/
+.linea {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.linea-h1, .linea-h2 {
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.linea-h1 {
+    top: 135px;
+}
+
+.linea-h2 {
+    top: 270px;
+}
+
+/*Menu*/
+.btn-nav {
+    background-color: #e30613;
+    position: absolute;
+    display: block;
+    width: 135px;
+    height: 135px;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.btn-nav .burguer {
+    position: absolute;
+    width: 46px;
+    height: 30px;
+    left: 50%;
+    margin-left: -23px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.btn-nav .burguer span {
+    width: 100%;
+    background: white;
+    height: 5px;
+    position: absolute;
+}
+
+.btn-nav .burguer span:first-child {
+    top: 0
+}
+
+.btn-nav .burguer span:nth-child(2) {
+    top: 13px
+}
+
+.btn-nav .burguer span:last-child {
+    bottom: 0
+}
+
+#nav-main {
+    display: block;
+    position: fixed;
+    background-color: #e30613;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    right: -50%;
+    padding: 170px;
+    transition: right 500ms ease;
+}
+
+#nav-main a {
+    display: block;
+    font-size: 3.25rem;
+    font-family: 'oswaldregular';
+    color: white;
+    line-height: 2.5;
+}
+.velo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 800ms ease;
+    opacity: 1;
+
+}
+.velo.oculto {
+    opacity: 0;
+}
+/*=======
+=========
+Inicio
+=========
+=======*/
+.inicio #fullwrap {
+    background: url('../img/fondo-home-temp.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.inicio .logo {
+    background: white;
+    width: 135px;
+    height: 135px;
+    padding: 14px 12px 10px;
+    margin-top: 135px;
+}
+
+.nav-home {
+    display: block;
+    margin-top: 135px;
+    height: 576px;
+    position: relative;
+    border: 4px solid white;
+}
+
+.nav-home a {
+    display: block;
+    position: absolute;
+    padding: 1rem;
+    color: white;
+    overflow: hidden;
+}
+
+.nav-home a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    background-color: #e30613;
+    transition: height 500ms ease-out;
+}
+
+.nav-home a:hover:before {
+    height: 100%;
+}
+
+.nav-home a h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 2rem;
+    line-height: 1.25;
+    bottom: 15px;
+    left: 15px;
+    
+}
+.nav-home a p {
+    margin-bottom: 0;
+    opacity: 0
+}
+.nav-home a:hover p {
+    transition: opacity 300ms linear 300ms;
+    opacity: 1
+}
+.nav-home a .txt {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+.nav-home .lugar {
+    height: 100%;
+    width: 50%;
+    border-right: 4px solid white;
+    top: 0;
+    
+}
+
+.nav-home .proyecto {
+    right: 0;
+    width: 50%;
+    height: 75%;
+    border-bottom: 4px solid white;
+}
+
+.nav-home .zonas {
+    left: 50%;
+    bottom: 0;
+    width: 25%;
+    height: 25%;
+    border-right: 4px solid white;
+}
+
+.nav-home .ubicacion {
+    right: 0;
+    bottom: 0;
+    width: 25%;
+    height: 25%;
+}
+
+.nav-home .zonas h2, .nav-home .ubicacion h2 {
+    transition: all 700ms;
+    margin-bottom: 0;
+}
+
+.nav-home .zonas:hover h2, .nav-home .ubicacion:hover h2 {
+    transform: translateY(-15px);
+}
+.nav-home .lugar .txt,
+.nav-home .proyecto .txt {
+    transform: translateY(100%);
+    bottom: calc(2rem + 20px);
+    transition: all 700ms;
+}
+.nav-home .lugar:hover .txt,
+.nav-home .proyecto:hover .txt {
+    transform: translateY(0);
+    bottom: 15px;
+}
+.inicio .col:first-child {
+    min-height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
