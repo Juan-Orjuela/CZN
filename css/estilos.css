@@ -26,9 +26,11 @@ html {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'oswaldregular';
 }
+
 p {
     font-family: 'fira_sanslight';
 }
+
 /*Estructura*/
 #fullwrap {
     min-height: 100vh;
@@ -39,8 +41,8 @@ p {
     min-height: 100vh;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
-    z-index:2;
-    position: relative;;
+    z-index: 2;
+    position: relative;
 }
 
 @media (min-width: 1200px) {
@@ -135,6 +137,7 @@ img {
     color: white;
     line-height: 2.5;
 }
+
 .velo {
     position: fixed;
     top: 0;
@@ -144,10 +147,102 @@ img {
     background: rgba(0, 0, 0, 0.4);
     transition: opacity 800ms ease;
     opacity: 1;
-
 }
+
 .velo.oculto {
     opacity: 0;
+}
+
+#logo-cusezar {
+    position: absolute;
+    bottom: 30px;
+}
+
+.interna h1 {
+    background: #e30613;
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+.btn {
+    display: block;
+    width: 240px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: 'oswaldregular';
+    border-radius: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 3px solid #e30613;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1;
+    color: #e30613;
+    letter-spacing: 0.075em;
+    padding: 0;
+}
+
+.btn .text {
+    transition: transform .4s ease;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: .7rem .5rem .8rem;
+}
+
+.btn .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: #e30613;
+    transform: translateY(100%);
+    transition: transform .4s ease;
+    height: 100%;
+    width: 100%;
+    padding: .7rem .5rem;
+}
+
+.btn:hover .text {
+    transform: translateY(-104%) translateZ(0);
+    color: #e30613;
+}
+
+.btn:hover .hover {
+    transform: translateZ(0);
+}
+
+.letra {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.letra.c {
+    width: 389px;
+}
+
+.letra.e {
+    width: 330px;
+}
+.btn-blanco {
+    color: #fff;
+    border: 3px solid #ffffff;
+}
+.btn-blanco:hover .text {
+    color: #fff;
+}
+.btn-blanco .hover {
+    color: #e30613;
+    background: #ffffff;
 }
 /*=======
 =========
@@ -205,16 +300,18 @@ Inicio
     line-height: 1.25;
     bottom: 15px;
     left: 15px;
-    
 }
+
 .nav-home a p {
     margin-bottom: 0;
     opacity: 0
 }
+
 .nav-home a:hover p {
     transition: opacity 300ms linear 300ms;
     opacity: 1
 }
+
 .nav-home a .txt {
     position: absolute;
     bottom: 15px;
@@ -227,7 +324,6 @@ Inicio
     width: 50%;
     border-right: 4px solid white;
     top: 0;
-    
 }
 
 .nav-home .proyecto {
@@ -260,18 +356,124 @@ Inicio
 .nav-home .zonas:hover h2, .nav-home .ubicacion:hover h2 {
     transform: translateY(-15px);
 }
-.nav-home .lugar .txt,
-.nav-home .proyecto .txt {
+
+.nav-home .lugar .txt, .nav-home .proyecto .txt {
     transform: translateY(100%);
     bottom: calc(2rem + 20px);
     transition: all 700ms;
 }
-.nav-home .lugar:hover .txt,
-.nav-home .proyecto:hover .txt {
+
+.nav-home .lugar:hover .txt, .nav-home .proyecto:hover .txt {
     transform: translateY(0);
     bottom: 15px;
 }
+
 .inicio .col:first-child {
     min-height: 100vh;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*=======
+=========
+Lugar 01
+=========
+=======*/
+#lugar_01 .velo {
+    opacity: 0;
+}
+
+#lugar_01 #fullwrap {
+    background: url('../img/fondo-lugar_01-color.jpg') no-repeat center;
+    background-size: 100%;
+}
+
+#lugar_01 #fullwrap:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url('../img/fondo-lugar_01-gris.jpg') no-repeat left;
+    background-size: 200%;
+}
+
+#lugar_01 .videowrap {
+    overflow: hidden;
+    width: 100%;
+    width: calc(100%);
+    height: 690px;
+    margin-top: 270px;
+}
+
+#lugar_01 .videowrap video {
+    max-height: 100%;
+}
+
+#lugar_01 .bloque {
+    background: white;
+    margin-top: 270px;
+    margin-top: 135px;
+    min-height: 826px;
+    padding-top: 135px;
+    margin-right: 135px;
+    position: relative;
+}
+
+#lugar_01 h1 {
+    padding-left: 30px;
+    margin-bottom: 70px;
+}
+
+#lugar_01 p {
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+#lugar_01 .btn {
+    left: 30px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.letra.c {
+    top: 65px;
+    left: 70px
+}
+
+.letra.e {
+    top: 70px;
+    left: 500px;
+}
+
+/*=======
+=========
+Lugar 02
+=========
+=======*/
+#lugar_02 #fullwrap {
+    background: url('../img/fondo-lugar_02-color.jpg') no-repeat center;
+}
+
+#lugar_02 .img-lugar-2 {
+    margin-top: 135px;
+    background: url('../img/fondo-lugar_02-color.jpg') no-repeat -135px -135px;
+    height: 600px;
+    height: calc(100vh - 135px);
+}
+#lugar_02 h1 {
+    margin-top: 270px;
+    width: 150%;
+    margin-left: -50%;
+    padding-left: 20px;
+}
+#lugar_02 .rango-area {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 135px;
+    margin-bottom: 135px;
+    min-height: 190px
+}
+#lugar_02 .btn {
+    float: right;
+    clear: all;
 }
