@@ -233,7 +233,12 @@ img {
 .letra.e {
     width: 330px;
 }
-
+.letra.n {
+    width: 381px;
+}
+.letra.a {
+    width: 450px;
+}
 .btn-blanco {
     color: #fff;
     border: 3px solid #ffffff;
@@ -447,12 +452,12 @@ Lugar 01
     bottom: 30px;
 }
 
-.letra.c {
+#lugar_01 .letra.c {
     top: 65px;
     left: 70px
 }
 
-.letra.e {
+#lugar_01 .letra.e {
     top: 70px;
     left: 500px;
 }
@@ -492,7 +497,13 @@ Lugar 02
     float: right;
     clear: all;
 }
-
+#lugar_02 .letra.n {
+    top: 75px;
+    left: 70px
+}
+#lugar_02 .letra.n2 {
+    left: 550px
+}
 /*=======
 =========
 Lugar 03
@@ -525,32 +536,6 @@ Lugar 03
     margin-top: 135px;
 }
 
-/*
-#lugar_03 .custom-control-label::before {
-    position: absolute;
-    top: .25rem;
-    left: 0;
-    width: 5rem;
-    height: 5rem;
-}
-#lugar_03 .custom-control {
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-}
-#lugar_03 .custom-control-label::after {
-    position: absolute;
-    top: .25rem;
-    left: 0;
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-}
-*/
 #lugar_03 .custom-control {
     display: inline-block;
     width: 5rem;
@@ -601,4 +586,17 @@ input:focus, select:focus, textarea:focus, button:focus {
     float: right;
     margin-top: 822px;
     margin-top: 80.5vh;
+}
+#lugar_03 .row > div:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#lugar_03 .letra.a {
+    right: 0;
+    left: initial;
+    bottom: 30px;
+    top: initial;
+    transform:translateX(50%)
 }
