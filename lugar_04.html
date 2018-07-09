@@ -11,52 +11,32 @@
   <title>Cezanne | Un proyecto de Cusezar</title>
 </head>
 
-<body id="lugar_02" class="interna">
-  <div id="fullwrap">
+<body id="lugar_04" class="interna">
+  <div id="fullwrap" data-mirar="vocc">
     <div class="velo"></div>
 
-    <div class="letra n n1">
-      <svg version="1.1" baseProfile="basic" id="letra-n1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" viewBox="0 0 381.7 404.2" xml:space="preserve">
-        <style type="text/css">
-          .st0 {
-            fill: none;
-            stroke: #E30613;
-            stroke-miterlimit: 10;
-          }
-        </style>
-        <g>
-          <path class="st0" d="M0.5,0.5h104.3l165.9,213.1V0.5h110.6v403.2h-97.9L111.1,182.5v221.2H0.5V0.5z" />
-        </g>
-      </svg>
-    </div>
-    <div class="letra n n2">
-      <svg version="1.1" baseProfile="basic" id="letra-n2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" viewBox="0 0 381.7 404.2" xml:space="preserve">
-        <style type="text/css">
-          .st1 {
-            fill: none;
-            stroke: #E30613;
-            stroke-miterlimit: 10;
-          }
-        </style>
-        <g>
-          <path class="st1" d="M0.5,0.5h104.3l165.9,213.1V0.5h110.6v403.2h-97.9L111.1,182.5v221.2H0.5V0.5z" />
-        </g>
-      </svg>
-    </div>
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-8">
-          <div class="img-lugar-2"></div>
-        </div>
-        <div class="col-4">
-
-          <h1>¿QUÉ ÁREA BUSCAS?</h1>
-          <div class="rango-area">
-
+        <div class="col">
+          <h1>
+            VISTA
+          </h1>
+          <div class="barra-inf">
+          <div id="vista">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="vista1" name="vista" class="custom-control-input vista-btn" data-vista="vsur">
+              <label class="custom-control-label" for="vista1">SUR</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="vista2" name="vista" class="custom-control-input vista-btn" checked="checked" data-vista="vocc">
+              <label class="custom-control-label" for="vista2">OCCIDENTE</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="vista3" name="vista" class="custom-control-input vista-btn" data-vista="vnor">
+              <label class="custom-control-label" for="vista3">NORTE</label>
+            </div>
           </div>
-          <a href="lugar_03.html" class="btn btn-blanco">
+          <a href="lugar_05.html" class="btn btn-blanco">
             <span class="text">
               <span class="inner">CONTINUAR</span>
             </span>
@@ -64,8 +44,18 @@
               <span class="inner">CONTINUAR</span>
             </span>
           </a>
-
         </div>
+          <div class="letra z">
+            <svg version="1.1" baseProfile="basic" id="letra-z" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 355.9 402.3" xml:space="preserve">
+         <style type="text/css">
+           .st0{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+         </style>
+         <path class="st0" d="M0.5,321L201.7,94.5H7.4v-94h348v80.8L154.1,307.8h201.2v94H0.5V321z"/>
+         </svg>
+          </div>
+        </div>
+        
       </div>
       <div id="logo-cusezar">
         <img src="img/logo-cusezar-temp.png" alt="Cusezar">
@@ -86,7 +76,6 @@
       <a href="">UBICACIÓN</a>
     </nav>
     <div class="linea linea-h1"></div>
-    <div class="linea linea-h2"></div>
     <div class="linea linea-v"></div>
 
   </div>

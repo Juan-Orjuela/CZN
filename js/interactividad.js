@@ -10,7 +10,7 @@ $(document).ready(function(){
               velo.removeClass( "oculto" );
             }
           });
-    //Animate letras
+    //Animar letras
     var lineDrawing = anime({
       targets: '.letra path',
       strokeDashoffset: [anime.setDashoffset, 0],
@@ -19,5 +19,13 @@ $(document).ready(function(){
       delay: function(el, i) { return i * 250 },
       direction: 'alternate',
       loop: false
+    });
+
+    //Vistas
+    $('.vista-btn').on('click', function() {
+      var vista = $(this).data('vista');
+     
+      console.log(vista);
+      $('#fullwrap').attr('data-mirar', vista);
     });
 });
