@@ -11,12 +11,37 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'fira_sansbold';
+    src: url('../fuentes/firasans-bold-webfont.woff2') format('woff2'),
+         url('../fuentes/firasans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 /*=======
 =========
 Generales
 =========
 =======*/
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8a8a8a; 
+}
 html {
     font-size: 16px;
     font-family: 'fira_sanslight';
@@ -315,6 +340,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     transition: all 500ms;
 }
 
+/**/
 /*=======
 =========
 Inicio
@@ -664,28 +690,167 @@ Lugar 04
     width: 15rem;
     height: 3.15rem;
     letter-spacing: 0.1em;
+}
 
-}
 #lugar_04 .btn {
-   position: absolute;
-   bottom: 0;
-   right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
+
 #lugar_04 #fullwrap {
     background: url('../img/fondo-lugar_04-temp.jpg') no-repeat center;
     background-size: cover;
     background-position-x: center;
     transition: all 700ms ease-in-out;
 }
+
 #lugar_04 .velo {
     opacity: 0;
 }
-#lugar_04 #fullwrap[data-mirar="vsur"]{
+
+#lugar_04 #fullwrap[data-mirar="vsur"] {
     background-position-x: left;
 }
+
 #lugar_04 #fullwrap[data-mirar="vocc"] {
-   background-position-x: center; 
+    background-position-x: center;
 }
+
 #lugar_04 #fullwrap[data-mirar="vnor"] {
-    background-position-x: right;    
+    background-position-x: right;
+}
+
+/*=======
+=========
+Lugar 05
+FILTROS
+=========
+=======*/
+.btn-repetir {
+    background: url('../img/refresh.svg') no-repeat 0.6rem 0.9rem;
+    background-size: 30%;
+    position: absolute;
+    display: block;
+    width: 135px;
+    height: 135px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    border-top: 1px solid white;
+    font-family: 'oswaldregular';
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 1);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    padding: 4rem 1.2rem 0;
+    text-decoration: none!important;
+    line-height: 1.2;
+    transition: all 300ms;
+}
+.btn-repetir:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: white;
+}
+
+#lugar_05 {
+    background: #e4e4e4;
+}
+
+#lugar_05 .velo {
+    opacity: 0;
+}
+
+#lugar_05 .container-fluid {
+    padding: 0;
+}
+
+#lugar_05 #filtros {
+    width: 405px;
+    flex-grow: 0;
+    flex-basis: auto;
+    min-height: 100vh;
+    background: white;
+}
+
+#lugar_05 #resultados {
+    margin-right: 135px;
+    height: 100vh;
+    border-right: 1px solid white;
+    overflow: auto;
+    padding-bottom: 60px;
+}
+
+#lugar_05 #filtros h2 {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    margin-top: 135px;
+    padding: 30px;
+}
+
+#lugar_05 .linea {
+    position: absolute;
+    background-color: white;
+}
+#lugar_05 h1 {
+    text-align: right;
+}
+#lugar_05 h1 {
+    background: transparent;
+    margin-top: 45px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#lugar_05 .bg-trans {
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: black;
+}
+
+#lugar_05 .bg-rojo {
+    background: #e30e13;
+    display:  inline-block;
+   
+}
+#lugar_05 #aptos {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#lugar_05 #resultados .row {
+    margin: 0;
+}
+#lugar_05 .apto-wrap {
+    border: 2px solid white;
+    display: block;
+    text-decoration: none!important;
+    transition: all 300ms;
+    color: black;
+}
+.apto-wrap:hover {
+    transform: translateY(-10px);
+}
+#aptos .planta {
+    background: white;
+    min-height: 250px;
+}
+#aptos .apto {
+    margin-top: 30px;
+}
+#aptos .apto-nombre {
+    font-family: 'fira_sansbold';
+    text-transform: uppercase;
+    font-size: 1.375rem;
+    padding: 1rem 1rem 0.8rem;
+    border-bottom: 2px solid white;
+    letter-spacing: 0.075em;
+}
+#aptos .apto-nombre ~ div {
+    width: 49.1%;
+    padding: 0.8rem 1rem 0.8rem;
+    font-family: 'oswaldregular';
+    font-size: 1.25rem;
+    display: inline-block;
+}
+#aptos .apto-nombre + div {
+    border-right: 2px solid white;
 }
