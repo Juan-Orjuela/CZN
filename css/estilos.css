@@ -335,7 +335,7 @@ Inicio
 
 .nav-home {
     display: block;
-    margin-top: 135px;
+    margin-top: 68px;
     height: 576px;
     position: relative;
     border: 4px solid white;
@@ -472,7 +472,7 @@ Lugar 01
     overflow: hidden;
     width: 100%;
     width: calc(100%);
-    height: 690px;
+    height: 645px;
     margin-top: 270px;
 }
 
@@ -484,7 +484,7 @@ Lugar 01
     background: white;
     margin-top: 270px;
     margin-top: 135px;
-    min-height: 826px;
+    min-height: 780px;
     padding-top: 135px;
     margin-right: 135px;
     position: relative;
