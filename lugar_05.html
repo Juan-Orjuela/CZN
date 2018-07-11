@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css" crossorigin="anonymous">
   <link rel="stylesheet" href="css/jquery-ui.min.css">
-  <link rel="stylesheet" href="css/jquery-ui-slider-pips.scss">
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
+  <link rel="stylesheet" href="css/area-slider.css">
   <title>Cezanne | Un proyecto de Cusezar</title>
 </head>
 
@@ -21,6 +23,64 @@
       <div class="row no-gutters">
         <div id="filtros" class="col">
           <h2>FILTRAR RESULTADOS</h2>
+          <div class="filtros-wrap">
+            <!--Rango de área-->
+            <div id="rango-area">
+              <h3>Área</h3>
+              <div class="czn-label" id="metros">Entre 50 y 80 MT
+                <span>2</span>
+              </div>
+              <div class="czn-slider" id="area-slider"></div>
+            </div>
+            <!--Habitaciones-->
+            <div id="habitaciones">
+              <h3>Habitaciones</h3>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="habitaciones1" name="habitaciones" class="custom-control-input">
+                <label class="custom-control-label" for="habitaciones1">1</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input">
+                <label class="custom-control-label" for="habitaciones2">2</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="habitaciones3" name="habitaciones" class="custom-control-input">
+                <label class="custom-control-label" for="habitaciones3">3</label>
+              </div>
+            </div>
+            <!--Vista-->
+            <div id="vista">
+              <h3>Vista</h3>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="vista1" name="vista" class="custom-control-input vista-btn" data-vista="vsur">
+                <label class="custom-control-label" for="vista1">SUR</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="vista2" name="vista" class="custom-control-input vista-btn" data-vista="vocc">
+                <label class="custom-control-label" for="vista2">OCCIDENTE</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="vista3" name="vista" class="custom-control-input vista-btn" data-vista="vnor">
+                <label class="custom-control-label" for="vista3">NORTE</label>
+              </div>
+            </div>
+            <!--Piso-->
+            <div id="rango-piso">
+              <h3>Piso</h3>
+              <div class="czn-label" id="pisos">Entre 10 y 25</div>
+              <div class="czn-slider" id="pisos-slider"></div>
+            </div>
+            <!--Botón aplicar filtros-->
+            <a href="#" class="btn btn-rojo">
+              <span class="text">
+                <span class="inner">APLICAR</span>
+              </span>
+              <span class="hover">
+                <span class="inner">APLICAR</span>
+              </span>
+            </a>
+          </div>
+
         </div>
         <div id="resultados" class="col">
           <h1>
@@ -32,7 +92,9 @@
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
                 <a href="#" class="apto-wrap">
-                  <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
                     <div class="apto-ac">AC:
@@ -44,69 +106,79 @@
               </div>
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
-                  <a href="#" class="apto-wrap">
-                    <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
-                    <div class="info">
-                      <div class="apto-nombre">Apto de 2 habitaciones</div>
-                      <div class="apto-ac">AC:
-                        <span>54.2</span> mt2</div>
-                      <div class="apto-ap">AP:
-                        <span>50.1</span> mt2</div>
-                    </div>
-                  </a>
-                </div>
+                <a href="#" class="apto-wrap">
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
+                  <div class="info">
+                    <div class="apto-nombre">Apto de 2 habitaciones</div>
+                    <div class="apto-ac">AC:
+                      <span>54.2</span> mt2</div>
+                    <div class="apto-ap">AP:
+                      <span>50.1</span> mt2</div>
+                  </div>
+                </a>
+              </div>
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
-                  <a href="#" class="apto-wrap">
-                    <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
-                    <div class="info">
-                      <div class="apto-nombre">Apto de 2 habitaciones</div>
-                      <div class="apto-ac">AC:
-                        <span>54.2</span> mt2</div>
-                      <div class="apto-ap">AP:
-                        <span>50.1</span> mt2</div>
-                    </div>
-                  </a>
-                </div>
+                <a href="#" class="apto-wrap">
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
+                  <div class="info">
+                    <div class="apto-nombre">Apto de 2 habitaciones</div>
+                    <div class="apto-ac">AC:
+                      <span>54.2</span> mt2</div>
+                    <div class="apto-ap">AP:
+                      <span>50.1</span> mt2</div>
+                  </div>
+                </a>
+              </div>
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
-                  <a href="#" class="apto-wrap">
-                    <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
-                    <div class="info">
-                      <div class="apto-nombre">Apto de 2 habitaciones</div>
-                      <div class="apto-ac">AC:
-                        <span>54.2</span> mt2</div>
-                      <div class="apto-ap">AP:
-                        <span>50.1</span> mt2</div>
-                    </div>
-                  </a>
-                </div>
+                <a href="#" class="apto-wrap">
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
+                  <div class="info">
+                    <div class="apto-nombre">Apto de 2 habitaciones</div>
+                    <div class="apto-ac">AC:
+                      <span>54.2</span> mt2</div>
+                    <div class="apto-ap">AP:
+                      <span>50.1</span> mt2</div>
+                  </div>
+                </a>
+              </div>
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
-                  <a href="#" class="apto-wrap">
-                    <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
-                    <div class="info">
-                      <div class="apto-nombre">Apto de 2 habitaciones</div>
-                      <div class="apto-ac">AC:
-                        <span>54.2</span> mt2</div>
-                      <div class="apto-ap">AP:
-                        <span>50.1</span> mt2</div>
-                    </div>
-                  </a>
-                </div>
-                <!--ESTO ES UN APTO-->
+                <a href="#" class="apto-wrap">
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
+                  <div class="info">
+                    <div class="apto-nombre">Apto de 2 habitaciones</div>
+                    <div class="apto-ac">AC:
+                      <span>54.2</span> mt2</div>
+                    <div class="apto-ap">AP:
+                      <span>50.1</span> mt2</div>
+                  </div>
+                </a>
+              </div>
+              <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
-                  <a href="#" class="apto-wrap">
-                    <div class="planta"><img src="plantas/ejemplo.jpg" alt="Ejemplo"></div>
-                    <div class="info">
-                      <div class="apto-nombre">Apto de 2 habitaciones</div>
-                      <div class="apto-ac">AC:
-                        <span>54.2</span> mt2</div>
-                      <div class="apto-ap">AP:
-                        <span>50.1</span> mt2</div>
-                    </div>
-                  </a>
-                </div>
+                <a href="#" class="apto-wrap">
+                  <div class="planta">
+                    <img src="plantas/ejemplo.jpg" alt="Ejemplo">
+                  </div>
+                  <div class="info">
+                    <div class="apto-nombre">Apto de 2 habitaciones</div>
+                    <div class="apto-ac">AC:
+                      <span>54.2</span> mt2</div>
+                    <div class="apto-ap">AP:
+                      <span>50.1</span> mt2</div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -114,7 +186,8 @@
       </div>
 
     </div>
-    <a href="lugar_02.html" class="btn-repetir">Repetir <br>test</a>
+    <a href="lugar_02.html" class="btn-repetir">Repetir
+      <br>test</a>
     <a href="" class="btn-nav">
       <div class="burguer">
         <span></span>
