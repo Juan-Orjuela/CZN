@@ -570,7 +570,8 @@ Lugar 02
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 135px;
     margin-bottom: 135px;
-    min-height: 190px
+    padding: 120px 30px 60px;
+    position: relative;
 }
 
 #lugar_02 .btn {
@@ -586,7 +587,22 @@ Lugar 02
 #lugar_02 .letra.n2 {
     left: 550px
 }
-
+#lugar_02 #metros {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    color: white;
+    font-family: 'fira_sansbold';
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+#lugar_02 #metros span {
+    font-size: .8em;
+    position: relative;
+    top: -.5em;
+    left: .1em;
+}
 /*=======
 =========
 Lugar 03

@@ -10,6 +10,7 @@ $(document).ready(function(){
               velo.removeClass( "oculto" );
             }
           });
+
     //Animar letras
     var lineDrawing = anime({
       targets: '.letra path',
@@ -28,4 +29,20 @@ $(document).ready(function(){
       console.log(vista);
       $('#fullwrap').attr('data-mirar', vista);
     });
+
+    //Slider Area
+    $("#flat-slider")
+    .slider({
+        max: 85,
+        min: 45,
+        range: true,
+        values: [50, 80],
+        step: 2.5
+    })
+    .slider("pips", {
+        first: "pip",
+        last: "pip"
+    }).on("slidechange", function(e,ui) {
+      $("#metros").html( "Entre " + ui.values[0] +  " y " + ui.values[1]+ " MT<span>2</span>");
+  });
 });
