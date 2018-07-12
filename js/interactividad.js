@@ -6,12 +6,21 @@ $('.btn-nav, #hide-nav').on('click', function (e) {
 });
 //Animar letras
 function anim_letras() {
-  anime({
+
+  anime.timeline()
+  .add({
+    targets: '.letra',
+    opacity: [0,1],
+    duration: 200,
+    easing: 'linear',
+    delay: function (el, i) { return 800 + (i * 1000) }
+  })
+  .add({
     targets: '.letra path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'linear',
     duration: 4500,
-    delay: function (el, i) { return 800 + (i * 1000) },
+    delay: function (el, i) { return 800 + (i * 1000) }
   })
 };
 
@@ -144,16 +153,29 @@ $('.nav-home').on({
 //Lugar 01
 function anim_lugar01() {
   anim_letras();
-  anime.timeline().add({
+  anime.timeline()
+  .add({
     targets: '.bloque',
     opacity: [0, 1],
     duration: 2000,
     easing: 'linear',
     delay: 1000
   })
+  .add({
+    targets: 'h1',
+    width: [0, '100%'],
+    duration: 800,
+    easing: 'easeOutSine',
+
+  })
+  .add({
+    targets: 'h1 span',
+    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+    duration: 1000,
+    easing: 'linear'
+  })
     .add({
-      targets: '.bloque h1, .bloque p, .bloque a',
-      translateY: [-50, 0],
+      targets: '.bloque p, .bloque a',
       opacity: [0, 1],
       easing: 'easeOutSine',
       duration: 600,
@@ -284,8 +306,9 @@ function anim_lugar05() {
   anim_letras();
   anime.timeline()
     .add({
-      targets: 'h1 ',
-      width: [0, '100%'],
+      targets: 'h1 .bg-rojo',
+      width: [0, 322],
+      paddingRight: 20,
       duration: 400,
       easing: 'easeOutSine',
       delay: 1000
