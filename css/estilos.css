@@ -760,12 +760,12 @@ Lugar 03
     overflow: hidden;
 }
 
-#lugar_03 .bg-trans {
+.bg-trans {
     background: transparent;
     white-space: nowrap;
 }
 
-#lugar_03 .bg-rojo {
+.bg-rojo {
     background: #e30e13;
 }
 
@@ -899,38 +899,11 @@ Lugar 04
 /*=======
 =========
 Lugar 05
-FILTROS
+RESULTADOS
 =========
 =======*/
 #lugar_05 #fullwrap {
     background-image: url('../img/fondo-lugar_05.jpg');
-}
-
-.btn-repetir {
-    background: url('../img/refresh.svg') no-repeat 0.6rem 0.9rem;
-    background-size: 30%;
-    position: absolute;
-    display: block;
-    width: 135px;
-    height: 135px;
-    bottom: 0;
-    right: 0;
-    z-index: 3;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    font-family: 'oswaldregular';
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
-    padding: 4rem 1.2rem 0;
-    text-decoration: none!important;
-    line-height: 1.2;
-    transition: all 300ms;
-}
-
-.btn-repetir:hover {
-    color: rgba(0, 0, 0, 1);
-    background-color: white;
 }
 
 #lugar_05 .velo {
@@ -1120,4 +1093,200 @@ FILTROS
 #filtros .btn {
     margin-top: 80px;
 }
+/*=======
+=========
+Lugar 06
+DETALLE APTO
+=========
+=======*/
+.pag-apto {
+    background: white;
+}
+.pag-apto table.data {
+   width: 100%;
+   border: 1px solid #b2b2b2; 
+   font-family: 'oswaldregular';
+   font-size: 1.5rem;
+   opacity: 0;
+}
+.pag-apto table.data tr {
+    border-top: 1px solid #b2b2b2; 
+}
+.pag-apto table.data td {
+    padding: 1rem;
+    width: 50%;
+    
+}
+.pag-apto table.data td:first-child {
+    border-right: 1px solid #b2b2b2; 
+}
+.pag-apto table.data td:last-child {
+    text-align: center;
+}
+.pag-apto table.data tr:first-child td {
+    padding: 2rem;
+}
+.pag-apto .linea {
+    background: #b2b2b2
+}
+.pag-apto h1 span {
+    width: 0;
+}
+.pag-apto  h1 .bg-trans,
+.pag-apto  h1 .bg-rojo {
+    padding-left: 0px;
+    padding-right: 0px;
+    color: transparent;
+}
+.pag-apto  h1 .bg-rojo {
+  
+}
+.pag-apto.interna h1 {
+    background: transparent;
+    width: 100%;
+    margin-top: 29px;
+    padding-bottom: 0;
+}
+.pag-apto .col-8 {
+    padding-top: 200px;
+}
+.pag-apto .letra.c {
+    top: 40px;
+    right: 550px;
+    left: initial;
+}
+.pag-apto .letra.e {
+    right: 135px;
+    left: initial;
+    top: 40px
+}
+.pag-apto .aptos-rel {
+    position: fixed;
+    bottom: 0;
+    width: 500px;
+    right: 135px;
+}
+.pag-apto .aptos-rel h3 {
+    margin: 0;
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+.pag-apto .aptos-rel h3 span {
+    display: block;
+    padding: 10px 20px;
+    font-size: 2.3rem;
+}
+.pag-apto .aptos-rel h3 .bg-rojo {
+    color: white;
+}
+.pag-apto .aptos-rel table {
+    font-family: 'oswaldregular';
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    background: white;
+    
+}
+.pag-apto .aptos-rel th,
+.pag-apto .aptos-rel td {
+    padding: 1rem;
+}
+.pag-apto .aptos-rel tbody tr:nth-child(odd) {
+    background: #efebeb;
+}
+.pag-apto .aptos-rel tbody tr {
+    transition: all 300ms;
+}
+.pag-apto .aptos-rel tbody tr:hover {
+    background: #e30e14;
+    color: white;
+    cursor: pointer;
+}
+.pag-apto .aptos-rel {
+    transform: translateY(0);
+    transition: all 400ms;
+    margin-bottom: -150px;
+}
+.pag-apto .aptos-rel.oculto {
+    transform: translateY(408px)
+}
+.pag-apto .aptos-rel.oculto:hover {
+    bottom: 15px;
+}
+.aptos-rel .desplegar {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 23px;
+    height: 13.78px;
+    transition: all 400ms;
+    transform: rotate(180deg);
+    transform-origin: 50% 100%;
+}
+.aptos-rel.oculto .desplegar {
+    transform: rotate(0);
+}
+#planta-apto {
+    opacity: 0;
+}
+.btn-volver {
+    position: fixed;
+    display: block;
+    width: 135px;
+    height: 135px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: 'oswaldregular';
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    padding: 4rem 1.2rem 0;
+    text-decoration: none!important;
+    line-height: 1.2;
+    transition: all 300ms;
+    text-align: center;
+    opacity: 0;
+}
 
+.btn-volver:hover {
+    color: rgb(227, 14, 20);
+}
+.btn-volver:before, .btn-volver:after {
+    content:'';
+    position: absolute;
+    display: block;
+    transition: all 200ms linear;
+}
+.btn-volver:before {
+    width: 16px;
+    height: 16px;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    top: 32px;
+    left: 50%;
+    margin-left: -20px;
+    transform: rotate(-45deg);
+}
+.btn-volver:after {
+    height: 2px;
+    width: 40px;
+    background: black;
+    top: 39px;
+    left: 50%;
+    margin-left: -20px;
+}
+.btn-volver:hover:before {
+    border-color: #e30e14;
+    margin-left: -30px;
+}
+.btn-volver:hover:after {
+    background-color: #e30e14;
+    width: 60px;
+    margin-left: -30px;
+}

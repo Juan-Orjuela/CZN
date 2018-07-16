@@ -4,6 +4,11 @@ $('.btn-nav, #hide-nav').on('click', function (e) {
   $('#nav-main').toggleClass('mostrar');
   $('#hide-nav').fadeToggle();
 });
+//Desplegar menu Aptos relacionados
+$('#mostrar-aptos').on('click', function (e) {
+  e.preventDefault();
+  $('.aptos-rel').toggleClass('oculto');
+});
 //Animar letras
 function anim_letras() {
 
@@ -150,6 +155,7 @@ $('.nav-home').on({
     $('.velo').removeClass("oculto");
   }
 });
+
 //Lugar 01
 function anim_lugar01() {
   anim_letras();
@@ -343,4 +349,58 @@ function anim_lugar05() {
         return (i * 300);
       }
     })    
+}
+//Lugar 06
+function anim_lugar06() {
+  anim_letras();
+  anime.timeline()
+    .add({
+      targets: 'h1 span',
+      width: [0, '100%'],
+      paddingLeft: 20,
+      duration: 400,
+      easing: 'easeOutSine',
+      delay: 1000
+    })
+    .add({
+      targets: 'h1 .bg-trans',
+      color: ['rgba(0,0,0,0)', 'rgba(0,0,0,1)'],
+      duration: 1000,
+      easing: 'linear'
+    })   
+    .add({
+      targets: 'h1 .bg-rojo',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear',
+      offset: '-=500'
+    })
+    .add({
+      targets: 'table.data',
+      opacity: [0, 1],
+      translateY: [50, 0],
+      duration: 400,
+      easing: 'linear',
+      complete: anim_Final      
+    })
+    .add({
+      targets: '.aptos-rel',
+      marginBottom: [-150, 0],
+      duration: 400,
+      easing: 'linear',      
+    })
+    .add({
+      targets: '#planta-apto',
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'linear',
+      offset: '-=200'      
+    })
+    .add({
+      targets: '.btn-volver',
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'linear',
+      offset: '-=400'      
+    })
 }
