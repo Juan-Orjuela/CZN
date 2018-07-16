@@ -1290,3 +1290,12 @@ DETALLE APTO
     width: 60px;
     margin-left: -30px;
 }
+/*=======
+=========
+ZONAS COMUNES
+Galeria
+=========
+=======*/
+.galeria #fullwrap > .container-fluid {
+    padding: 0;
+}
