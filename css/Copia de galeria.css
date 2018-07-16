@@ -6,7 +6,7 @@ html,
 		body {
 			margin: 0;
 			padding: 0;
-			background: #fff url(../gal/sw_page_bg.png);
+			background: #333 url(../gal/sw_page_bg.png);
 			overflow: hidden;
 			font-size: 16px;
 		}
@@ -67,7 +67,7 @@ html,
 			display: inline-block;
 			padding: 4px 15px;
 			margin: 20px 15px;
-			background: #ffffff url(../gal/sw_btn_bg.png) repeat-x;
+			background: #262626 url(../gal/sw_btn_bg.png) repeat-x;
 			-moz-border-radius: 8px;
 			-khtml-border-radius: 8px;
 			-webkit-border-radius: 8px;
@@ -92,7 +92,7 @@ html,
 		#customScrollBox {
 			position: relative;
 			overflow: hidden;
-			background: white;
+			background: url(../gal/sw_l_bg.png) repeat-y;
 		}
 
 		#customScrollBox .containerGal {

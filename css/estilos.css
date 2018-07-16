@@ -934,9 +934,11 @@ RESULTADOS
     width: 100%;
     text-align: right;
 }
+
 #lugar_05 h1 span {
-    color:#ffffff00;
+    color: #ffffff00;
 }
+
 #lugar_05 .bg-trans {
     background: transparent;
 }
@@ -1035,9 +1037,11 @@ RESULTADOS
     margin-right: .5rem;
     opacity: 1;
 }
+
 #filtros .btn {
     opacity: 1;
 }
+
 #filtros .custom-radio .custom-control-input:checked~.custom-control-label {
     color: white;
     border-color: #e30e14;
@@ -1093,6 +1097,7 @@ RESULTADOS
 #filtros .btn {
     margin-top: 80px;
 }
+
 /*=======
 =========
 Lugar 06
@@ -1102,84 +1107,100 @@ DETALLE APTO
 .pag-apto {
     background: white;
 }
+
 .pag-apto table.data {
-   width: 100%;
-   border: 1px solid #b2b2b2; 
-   font-family: 'oswaldregular';
-   font-size: 1.5rem;
-   opacity: 0;
+    width: 100%;
+    border: 1px solid #b2b2b2;
+    font-family: 'oswaldregular';
+    font-size: 1.5rem;
+    opacity: 0;
 }
+
 .pag-apto table.data tr {
-    border-top: 1px solid #b2b2b2; 
+    border-top: 1px solid #b2b2b2;
 }
+
 .pag-apto table.data td {
     padding: 1rem;
     width: 50%;
-    
 }
+
 .pag-apto table.data td:first-child {
-    border-right: 1px solid #b2b2b2; 
+    border-right: 1px solid #b2b2b2;
 }
+
 .pag-apto table.data td:last-child {
     text-align: center;
 }
+
 .pag-apto table.data tr:first-child td {
     padding: 2rem;
 }
+
 .pag-apto .linea {
     background: #b2b2b2
 }
+
 .pag-apto h1 span {
     width: 0;
 }
-.pag-apto  h1 .bg-trans,
-.pag-apto  h1 .bg-rojo {
+
+.pag-apto h1 .bg-trans, .pag-apto h1 .bg-rojo {
     padding-left: 0px;
     padding-right: 0px;
     color: transparent;
 }
-.pag-apto  h1 .bg-rojo {
-  
+
+.pag-apto h1 .bg-rojo {
 }
+
 .pag-apto.interna h1 {
     background: transparent;
     width: 100%;
     margin-top: 29px;
     padding-bottom: 0;
 }
+
 .pag-apto .col-8 {
     padding-top: 200px;
 }
+
 .pag-apto .letra.c {
     top: 40px;
     right: 550px;
     left: initial;
 }
+
 .pag-apto .letra.e {
     right: 135px;
     left: initial;
     top: 40px
 }
+
 .pag-apto .aptos-rel {
     position: fixed;
     bottom: 0;
     width: 500px;
     right: 135px;
 }
+
 .pag-apto .aptos-rel h3 {
     margin: 0;
     background: white;
     position: relative;
     cursor: pointer;
 }
+
 .pag-apto .aptos-rel h3 span {
     display: block;
     padding: 10px 20px;
     font-size: 2.3rem;
 }
+
 .pag-apto .aptos-rel h3 .bg-rojo {
     color: white;
 }
+
 .pag-apto .aptos-rel table {
     font-family: 'oswaldregular';
     table-layout: fixed;
@@ -1187,34 +1208,40 @@ DETALLE APTO
     text-align: center;
     font-size: 1.5rem;
     background: white;
-    
 }
-.pag-apto .aptos-rel th,
-.pag-apto .aptos-rel td {
+
+.pag-apto .aptos-rel th, .pag-apto .aptos-rel td {
     padding: 1rem;
 }
+
 .pag-apto .aptos-rel tbody tr:nth-child(odd) {
     background: #efebeb;
 }
+
 .pag-apto .aptos-rel tbody tr {
     transition: all 300ms;
 }
+
 .pag-apto .aptos-rel tbody tr:hover {
     background: #e30e14;
     color: white;
     cursor: pointer;
 }
+
 .pag-apto .aptos-rel {
     transform: translateY(0);
     transition: all 400ms;
     margin-bottom: -150px;
 }
+
 .pag-apto .aptos-rel.oculto {
     transform: translateY(408px)
 }
+
 .pag-apto .aptos-rel.oculto:hover {
     bottom: 15px;
 }
+
 .aptos-rel .desplegar {
     display: block;
     position: absolute;
@@ -1226,12 +1253,15 @@ DETALLE APTO
     transform: rotate(180deg);
     transform-origin: 50% 100%;
 }
+
 .aptos-rel.oculto .desplegar {
     transform: rotate(0);
 }
+
 #planta-apto {
     opacity: 0;
 }
+
 .btn-volver {
     position: fixed;
     display: block;
@@ -1257,12 +1287,14 @@ DETALLE APTO
 .btn-volver:hover {
     color: rgb(227, 14, 20);
 }
+
 .btn-volver:before, .btn-volver:after {
-    content:'';
+    content: '';
     position: absolute;
     display: block;
     transition: all 200ms linear;
 }
+
 .btn-volver:before {
     width: 16px;
     height: 16px;
@@ -1273,6 +1305,7 @@ DETALLE APTO
     margin-left: -20px;
     transform: rotate(-45deg);
 }
+
 .btn-volver:after {
     height: 2px;
     width: 40px;
@@ -1281,21 +1314,77 @@ DETALLE APTO
     left: 50%;
     margin-left: -20px;
 }
+
 .btn-volver:hover:before {
     border-color: #e30e14;
     margin-left: -30px;
 }
+
 .btn-volver:hover:after {
     background-color: #e30e14;
     width: 60px;
     margin-left: -30px;
 }
+
 /*=======
 =========
 ZONAS COMUNES
 Galeria
 =========
 =======*/
-.galeria #fullwrap > .container-fluid {
-    padding: 0;
+.galeria .bg-trans {
+    color: black
+}
+
+.galeria .bg-rojo {
+    background: #e30e13;
+}
+
+.galeria #nav-main {
+    box-sizing: border-box;
+}
+
+.galeria h1 {
+    width: 100%;
+    background: transparent;
+    margin-top: 44px;
+    padding:0;
+}
+
+.galeria h1 .bg-trans, .galeria h1 .bg-rojo {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*Anchos galeria*/
+.galeria #customScrollBox .containerGal {
+    width: 570px;
+}
+
+.galeria #outer_containerGal {
+    width: 570px;
+    padding: 0 135px 0 0;
+    
+}
+
+.galeria #bg {
+    left: 570px;
+}
+.galeria #customScrollBox a.thumb_link {
+    width: 50%;
+    height: 285px;
+    margin:0;
+}
+.galeria #customScrollBox a.thumb_link .selected {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 8px solid white;
+    box-sizing: border-box;
+}
+.galeria #arrow_indicator {
+    display: none!important;
+}
+.galeria #logo-cusezar {
+    left: 135px;
 }

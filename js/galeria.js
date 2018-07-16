@@ -249,14 +249,14 @@ function NextImageTip() {
 
 //slide in/out left pane function
 function SlidePanels(action) {
-  var speed = 900;
-  var easing = "easeInOutExpo";
+  var speed = 400;
+  var easing = "easeInOutSine";
   if (action == "open") {
     $("#arrow_indicator").fadeTo("fast", 0);
     $outer_containerGal.stop().animate({ left: 0 }, speed, easing);
-    $bg.stop().animate({ left: 585 }, speed, easing);
+    $bg.stop().animate({ left: 570 }, speed, easing);
   } else {
-    $outer_containerGal.stop().animate({ left: -710 }, speed, easing);
+    $outer_containerGal.stop().animate({ left: -570 }, speed, easing);
     $bg.stop().animate({ left: 0 }, speed, easing, function () { $("#arrow_indicator").fadeTo("fast", 1); });
   }
 }

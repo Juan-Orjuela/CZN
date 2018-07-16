@@ -357,7 +357,7 @@ function anim_lugar06() {
     .add({
       targets: 'h1 span',
       width: [0, '100%'],
-      paddingLeft: 20,
+      paddingLeft: [0, 20],
       duration: 400,
       easing: 'easeOutSine',
       delay: 1000
@@ -402,5 +402,40 @@ function anim_lugar06() {
       duration: 1000,
       easing: 'linear',
       offset: '-=400'      
+    })
+}
+//Galeria
+function anim_galeria() {
+  anime.timeline()
+    .add({
+      targets: 'h1 span',
+      width: [0, '100%'],
+      paddingLeft: [0, 20],
+      duration: 400,
+      easing: 'easeOutSine',
+      delay: 1000
+    })
+    .add({
+      targets: 'h1 .bg-trans',
+      color: ['rgba(0,0,0,0)', 'rgba(0,0,0,1)'],
+      duration: 1000,
+      easing: 'linear'
+    })   
+    .add({
+      targets: 'h1 .bg-rojo',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear',
+      offset: '-=500',
+      complete: anim_Final
+    })
+    .add({
+      targets: '.thumb_link',
+      opacity: [0, 1],
+      duration: 900,
+      easing: 'linear',
+      delay: function (el, i) {
+        return (i * 300);
+      }
     })
 }
