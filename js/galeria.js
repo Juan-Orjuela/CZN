@@ -4,8 +4,8 @@ $defaultViewMode = "full"; //full (fullscreen background), fit (fit to window), 
 $bg = $("#bg");
 $bgimg = $("#bg #bgimg");
 $preloader = $("#preloader");
-$outer_container = $("#outer_container");
-$outer_container_a = $("#outer_container a.thumb_link");
+$outer_containerGal = $("#outer_containerGal");
+$outer_containerGal_a = $("#outer_containerGal a.thumb_link");
 $toolbar = $("#toolbar");
 $nextimage_tip = $("#nextimage_tip");
 
@@ -14,9 +14,9 @@ $(window).load(function () {
   ImageViewMode($toolbar.data("imageViewMode"));
   //cache vars
   $customScrollBox = $("#customScrollBox");
-  $customScrollBox_container = $("#customScrollBox .container");
+  $customScrollBox_containerGal = $("#customScrollBox .containerGal");
   $customScrollBox_content = $("#customScrollBox .content");
-  $dragger_container = $("#dragger_container");
+  $dragger_containerGal = $("#dragger_containerGal");
   $dragger = $("#dragger");
 
   CustomScroller();
@@ -25,12 +25,12 @@ $(window).load(function () {
     outerMargin = 0;
     innerMargin = 20;
     $customScrollBox.height($(window).height() - outerMargin);
-    $dragger_container.height($(window).height() - innerMargin);
+    $dragger_containerGal.height($(window).height() - innerMargin);
     visibleHeight = $(window).height() - outerMargin;
-    if ($customScrollBox_container.height() > visibleHeight) { //custom scroll depends on content height
-      $dragger_container, $dragger.css("display", "block");
+    if ($customScrollBox_containerGal.height() > visibleHeight) { //custom scroll depends on content height
+      $dragger_containerGal, $dragger.css("display", "block");
       totalContent = $customScrollBox_content.height();
-      draggerContainerHeight = $(window).height() - innerMargin;
+      draggercontainerGalHeight = $(window).height() - innerMargin;
       animSpeed = 400; //animation speed
       easeType = "easeOutCirc"; //easing type
       bottomSpace = 1.05; //bottom scrolling space
@@ -48,14 +48,14 @@ $(window).load(function () {
       });
 
       //scrollbar click
-      $dragger_container.click(function (e) {
+      $dragger_containerGal.click(function (e) {
         var mouseCoord = (e.pageY - $(this).offset().top);
         var targetPos = mouseCoord + $dragger.height();
-        if (targetPos < draggerContainerHeight) {
+        if (targetPos < draggercontainerGalHeight) {
           $dragger.css("top", mouseCoord);
           Scroll();
         } else {
-          $dragger.css("top", draggerContainerHeight - $dragger.height());
+          $dragger.css("top", draggercontainerGalHeight - $dragger.height());
           Scroll();
         }
       });
@@ -68,12 +68,12 @@ $(window).load(function () {
           Scroll();
           if ($dragger.position().top < 0) {
             $dragger.css("top", 0);
-            $customScrollBox_container.stop();
+            $customScrollBox_containerGal.stop();
             Scroll();
           }
-          if ($dragger.position().top > draggerContainerHeight - $dragger.height()) {
-            $dragger.css("top", draggerContainerHeight - $dragger.height());
-            $customScrollBox_container.stop();
+          if ($dragger.position().top > draggercontainerGalHeight - $dragger.height()) {
+            $dragger.css("top", draggercontainerGalHeight - $dragger.height());
+            $customScrollBox_containerGal.stop();
             Scroll();
           }
           return false;
@@ -81,11 +81,11 @@ $(window).load(function () {
       });
 
       function Scroll() {
-        var scrollAmount = (totalContent - (visibleHeight / bottomSpace)) / (draggerContainerHeight - draggerHeight);
+        var scrollAmount = (totalContent - (visibleHeight / bottomSpace)) / (draggercontainerGalHeight - draggerHeight);
         var draggerY = $dragger.position().top;
         targY = -draggerY * scrollAmount;
-        var thePos = $customScrollBox_container.position().top - targY;
-        $customScrollBox_container.stop().animate({ top: "-=" + thePos }, animSpeed, easeType); //with easing
+        var thePos = $customScrollBox_containerGal.position().top - targY;
+        $customScrollBox_containerGal.stop().animate({ top: "-=" + thePos }, animSpeed, easeType); //with easing
       }
 
       //dragger hover
@@ -103,7 +103,7 @@ $(window).load(function () {
         $dragger.css("background", "url(round_custom_scrollbar_bg.png)");
       }
     } else { //hide custom scrollbar if content is short
-      $dragger, $dragger_container.css("display", "none");
+      $dragger, $dragger_containerGal.css("display", "none");
     }
   }
 
@@ -111,7 +111,7 @@ $(window).load(function () {
   $(window).resize(function () {
     FullScreenBackground("#bgimg"); //scale bg image
     $dragger.css("top", 0); //reset content scroll
-    $customScrollBox_container.css("top", 0);
+    $customScrollBox_containerGal.css("top", 0);
     $customScrollBox.unbind("mousewheel");
     CustomScroller();
   });
@@ -132,11 +132,11 @@ function LargeImageLoad($this) {
     $this.attr("title", $bg.data("newTitle")); //set new image title attribute
   }
   FullScreenBackground($this); //scale new image
-  $bg.data("nextImage", $($outer_container.data("selectedThumb")).next().attr("href")); //get and store next image
+  $bg.data("nextImage", $($outer_containerGal.data("selectedThumb")).next().attr("href")); //get and store next image
   if (typeof itemIndex != "undefined") {
     if (itemIndex == lastItemIndex) { //check if it is the last image
       $bg.data("lastImageReached", "Y");
-      $bg.data("nextImage", $outer_container_a.first().attr("href")); //get and store next image
+      $bg.data("nextImage", $outer_containerGal_a.first().attr("href")); //get and store next image
     } else {
       $bg.data("lastImageReached", "N");
     }
@@ -151,7 +151,7 @@ function LargeImageLoad($this) {
 }
 
 //slide in/out left pane
-$outer_container.hover(
+$outer_containerGal.hover(
   function () { //mouse over
     SlidePanels("open");
   },
@@ -161,22 +161,22 @@ $outer_container.hover(
 );
 
 //Clicking on thumbnail changes the background image
-$outer_container_a.click(function (event) {
+$outer_containerGal_a.click(function (event) {
   event.preventDefault();
   var $this = this;
   $bgimg.css("display", "none");
   $preloader.fadeIn("fast"); //show preloader
   //style clicked thumbnail
-  $outer_container_a.each(function () {
+  $outer_containerGal_a.each(function () {
     $(this).children(".selected").css("display", "none");
   });
   $(this).children(".selected").css("display", "block");
   //get and store next image and selected thumb 
-  $outer_container.data("selectedThumb", $this);
+  $outer_containerGal.data("selectedThumb", $this);
   $bg.data("nextImage", $(this).next().attr("href"));
   $bg.data("newTitle", $(this).children("img").attr("title")); //get and store new image title attribute
   itemIndex = getIndex($this); //get clicked item index
-  lastItemIndex = ($outer_container_a.length) - 1; //get last item index
+  lastItemIndex = ($outer_containerGal_a.length) - 1; //get last item index
   $bgimg.attr("src", "").attr("src", $this); //switch image
 });
 
@@ -186,20 +186,20 @@ $bgimg.click(function (event) {
   if ($bg.data("nextImage")) { //if next image data is stored
     $this.css("display", "none");
     $preloader.fadeIn("fast"); //show preloader
-    $($outer_container.data("selectedThumb")).children(".selected").css("display", "none"); //deselect thumb
+    $($outer_containerGal.data("selectedThumb")).children(".selected").css("display", "none"); //deselect thumb
     if ($bg.data("lastImageReached") != "Y") {
-      $($outer_container.data("selectedThumb")).next().children(".selected").css("display", "block"); //select new thumb
+      $($outer_containerGal.data("selectedThumb")).next().children(".selected").css("display", "block"); //select new thumb
     } else {
-      $outer_container_a.first().children(".selected").css("display", "block"); //select new thumb - first
+      $outer_containerGal_a.first().children(".selected").css("display", "block"); //select new thumb - first
     }
     //store new selected thumb
-    var selThumb = $outer_container.data("selectedThumb");
+    var selThumb = $outer_containerGal.data("selectedThumb");
     if ($bg.data("lastImageReached") != "Y") {
-      $outer_container.data("selectedThumb", $(selThumb).next());
+      $outer_containerGal.data("selectedThumb", $(selThumb).next());
     } else {
-      $outer_container.data("selectedThumb", $outer_container_a.first());
+      $outer_containerGal.data("selectedThumb", $outer_containerGal_a.first());
     }
-    $bg.data("newTitle", $($outer_container.data("selectedThumb")).children("img").attr("title")); //get and store new image title attribute
+    $bg.data("newTitle", $($outer_containerGal.data("selectedThumb")).children("img").attr("title")); //get and store new image title attribute
     if ($bg.data("lastImageReached") != "Y") {
       itemIndex++;
     } else {
@@ -211,8 +211,8 @@ $bgimg.click(function (event) {
 
 //function to get element index (fuck you IE!)
 function getIndex(theItem) {
-  for (var i = 0, length = $outer_container_a.length; i < length; i++) {
-    if ($outer_container_a[i] === theItem) {
+  for (var i = 0, length = $outer_containerGal_a.length; i < length; i++) {
+    if ($outer_containerGal_a[i] === theItem) {
       return i;
     }
   }
@@ -253,10 +253,10 @@ function SlidePanels(action) {
   var easing = "easeInOutExpo";
   if (action == "open") {
     $("#arrow_indicator").fadeTo("fast", 0);
-    $outer_container.stop().animate({ left: 0 }, speed, easing);
+    $outer_containerGal.stop().animate({ left: 0 }, speed, easing);
     $bg.stop().animate({ left: 585 }, speed, easing);
   } else {
-    $outer_container.stop().animate({ left: -710 }, speed, easing);
+    $outer_containerGal.stop().animate({ left: -710 }, speed, easing);
     $bg.stop().animate({ left: 0 }, speed, easing, function () { $("#arrow_indicator").fadeTo("fast", 1); });
   }
 }

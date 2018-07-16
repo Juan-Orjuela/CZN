@@ -79,7 +79,7 @@ html,
 			cursor: pointer;
 		}
 
-		#outer_container {
+		#outer_containerGal {
 			position: relative;
 			margin: 0;
 			width: 700px;
@@ -96,7 +96,7 @@ html,
 			background: url(../gal/sw_l_bg.png) repeat-y;
 		}
 
-		#customScrollBox .container {
+		#customScrollBox .containerGal {
 			position: relative;
 			width: 585px;
 			top: 0;
@@ -172,7 +172,7 @@ html,
 			display: none;
 		}
 
-		#dragger_container {
+		#dragger_containerGal {
 			position: relative;
 			width: 30px;
 			height: 580px;
