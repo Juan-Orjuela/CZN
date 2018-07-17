@@ -489,7 +489,8 @@ Inicio
     opacity: 0;
 }
 
-.nav-home {
+.nav-home,
+.nav-proyecto {
     display: block;
     margin-top: 68px;
     height: 576px;
@@ -498,7 +499,8 @@ Inicio
     opacity: 0
 }
 
-.nav-home a {
+.nav-home a,
+.nav-proyecto a {
     display: block;
     position: absolute;
     padding: 1rem;
@@ -506,7 +508,8 @@ Inicio
     overflow: hidden;
 }
 
-.nav-home a:before {
+.nav-home a:before,
+.nav-proyecto a:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -517,11 +520,13 @@ Inicio
     transition: height 500ms ease-out;
 }
 
-.nav-home a:hover:before {
+.nav-home a:hover:before,
+.nav-proyecto a:hover:before {
     height: 100%;
 }
 
-.nav-home a h2 {
+.nav-home a h2,
+.nav-proyecto a h2 {
     text-transform: uppercase;
     letter-spacing: 0.02em;
     font-size: 2rem;
@@ -530,17 +535,20 @@ Inicio
     left: 15px;
 }
 
-.nav-home a p {
+.nav-home a p,
+.nav-proyecto a p {
     margin-bottom: 0;
     opacity: 0
 }
 
-.nav-home a:hover p {
+.nav-home a:hover p,
+.nav-proyecto a:hover p {
     transition: opacity 300ms linear 300ms;
     opacity: 1
 }
 
-.nav-home a .txt {
+.nav-home a .txt,
+.nav-proyecto a .txt {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -1394,4 +1402,83 @@ Galeria
 }
 .galeria #bgimg {
     cursor: url('../img/czn-next.png'), auto;
+}
+/*=======
+=========
+PROYECTO
+=========
+=======*/
+#proyecto #fullwrap {
+    background-image: url('../img/fondo-proyecto.jpg');
+}
+#proyecto .nav-proyecto {
+    margin-top: 362px
+}
+#proyecto .nav-proyecto::after {
+    content:"RENOVACIÓN URBANA";
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    border-bottom: 4px solid white;
+    top: 0;
+    padding-left: 15px;
+    letter-spacing: 0.02em;
+    font-size: 2rem;
+    font-family: 'oswaldregular';
+    color: #fff;
+
+}
+#proyecto .nav-proyecto .cezanne {
+    height: 100%;
+    width: 50%;
+    border-right: 4px solid white;
+    top: 0;
+}
+
+#proyecto .nav-proyecto .nvista,
+#proyecto .nav-proyecto .vip {
+    right: 0;
+    width: 50%;
+    height: 50%;
+    height: calc(50% - 26px);
+}
+#proyecto .nav-proyecto .nvista {
+    top: 52px;
+}
+#proyecto .nav-proyecto .vip {
+    bottom: 0;
+    border-top: 4px solid white;
+}
+
+#proyecto .nav-proyecto .txt {
+    transform: translateY(100%);
+    bottom: calc(2rem + 20px);
+    transition: all 700ms;
+}
+
+#proyecto .nav-proyecto :hover .txt {
+    transform: translateY(0);
+    bottom: 15px;
+}
+#proyecto h1 {
+    margin-top: 164px;
+    background: transparent;
+    width: 50%;
+}
+#proyecto h1 span {
+    white-space: nowrap;
+    padding: 0;
+    color: rgba(255,255,255,0);
+    width: 0;
+
+}
+#proyecto .letra.z {
+    top: initial;
+    left: 135px;
+    bottom: 24px;
+}
+#proyecto .letra.a {
+    top: initial;
+    left: 511px;
+    bottom: 24px;
 }

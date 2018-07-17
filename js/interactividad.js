@@ -439,3 +439,38 @@ function anim_galeria() {
       }
     })
 }
+//Proyecto
+function anim_proyecto() {
+  anim_letras();
+  anime.timeline()
+  .add({
+    targets: 'h1 span',
+    width: [0, '100%'],
+    paddingLeft: [0, 20],
+    duration: 400,
+    easing: 'easeOutSine',
+    delay: 1000
+  })
+  .add({
+    targets: 'h1 .bg-trans',
+    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+    duration: 1000,
+    easing: 'linear',
+    complete: anim_Final
+  })   
+  .add({
+    targets: 'h1 .bg-rojo',
+    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+    duration: 1000,
+    easing: 'linear',
+    offset: '-=500'
+  })
+    .add({
+      targets: '#proyecto .nav-proyecto',
+      duration: 1000,
+      opacity: [0, 1],
+      easing: 'linear'
+
+    });
+
+}
