@@ -1388,3 +1388,10 @@ Galeria
 .galeria #logo-cusezar {
     left: 135px;
 }
+.galeria #preloader,
+.galeria #nextimage_tip {
+    display: none!important;
+}
+.galeria #bgimg {
+    cursor: url('../img/czn-next.png'), auto;
+}

@@ -6,7 +6,7 @@ html,
 		body {
 			margin: 0;
 			padding: 0;
-			background: #fff url(../gal/sw_page_bg.png);
+			background: #fff;
 			overflow: hidden;
 			font-size: 16px;
 		}

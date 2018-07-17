@@ -144,12 +144,11 @@ function LargeImageLoad($this) {
     $bg.data("lastImageReached", "N");
   }
   $this.fadeIn("slow"); //fadein background image
-  if ($bg.data("nextImage") || $bg.data("lastImageReached") == "Y") { //don't close thumbs pane on 1st load
+  if ( ($bg.data("nextImage") || $bg.data("lastImageReached") == "Y") && primeraVez > 1 ) { //don't close thumbs pane on 1st load
     SlidePanels("close"); //close the left pane
   }
   NextImageTip();
 }
-
 //slide in/out left pane
 $outer_containerGal.hover(
   function () { //mouse over
@@ -159,9 +158,9 @@ $outer_containerGal.hover(
     SlidePanels("close");
   }
 );
-
-//Clicking on thumbnail changes the background image
-$outer_containerGal_a.click(function (event) {
+var primeraVez = 0;
+function cambiarFondo(event) {
+  primeraVez++;
   event.preventDefault();
   var $this = this;
   $bgimg.css("display", "none");
@@ -178,8 +177,10 @@ $outer_containerGal_a.click(function (event) {
   itemIndex = getIndex($this); //get clicked item index
   lastItemIndex = ($outer_containerGal_a.length) - 1; //get last item index
   $bgimg.attr("src", "").attr("src", $this); //switch image
-});
-
+}
+//Clicking on thumbnail changes the background image
+$outer_containerGal_a.click(cambiarFondo);
+$('.thumb_link.inicial').trigger( "click" );
 //clicking on large image loads the next one
 $bgimg.click(function (event) {
   var $this = $(this);
