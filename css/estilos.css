@@ -1493,7 +1493,8 @@ NUEVA VISTA
 #proy-vis #fullwrap {
     background-image: url('../img/fondo-NUEVA-VISTA.jpg');
 }
-#proy-vis .velo {
+#proy-vis .velo,
+#proy-vip .velo {
     opacity: 1;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -1503,17 +1504,21 @@ NUEVA VISTA
     padding: 0;
     margin-bottom: 91px;
 }
-#proy-vis h1 span{
+#proy-vis h1 span,
+#proy-vip h1 span{
     padding: 0;
+    color: transparent;
 }
-#proy-vis .bloque {
+#proy-vis .bloque,
+#proy-vip .bloque {
     background: white;
     padding: 32px 135px;
     position: relative;
     opacity: 0;
     font-size: 1.5rem;
 }
-#proy-vis .bloque p:last-child {
+#proy-vis .bloque p:last-child,
+#proy-vip .bloque p:last-child {
     margin-bottom: 0;
 }
 #proy-vis .letra.n {
@@ -1522,6 +1527,38 @@ NUEVA VISTA
     right: 135px;
 }
 #proy-vis .bloque,
-#proy-vis .col-full {
+#proy-vis .col-full,
+#proy-vip .bloque,
+#proy-vip .col-full {
     opacity: 0
+}
+/*=======
+=========
+VIP
+=========
+=======*/
+#proy-vip #fullwrap {
+    background-image: url('../img/fondo-vip.jpg');
+}
+#proy-vip h1 {
+    background: transparent;
+    margin-top: 180px;
+    padding: 0;
+    margin-bottom: 91px;
+}
+#proy-vip h1,
+#proy-vip .bloque {
+    margin-left: -135px;
+    max-width: 100%;
+}
+#proy-vip .col-full img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+}
+#proy-vip .letra.e {
+    top: initial;
+    bottom: 24px;
+    left: 50%;
+    margin-left: -400px;
 }
