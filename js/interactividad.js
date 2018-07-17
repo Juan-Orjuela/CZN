@@ -13,20 +13,20 @@ $('#mostrar-aptos').on('click', function (e) {
 function anim_letras() {
 
   anime.timeline()
-  .add({
-    targets: '.letra',
-    opacity: [0,1],
-    duration: 200,
-    easing: 'linear',
-    delay: function (el, i) { return 800 + (i * 1000) }
-  })
-  .add({
-    targets: '.letra path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'linear',
-    duration: 4500,
-    delay: function (el, i) { return 800 + (i * 1000) }
-  })
+    .add({
+      targets: '.letra',
+      opacity: [0, 1],
+      duration: 200,
+      easing: 'linear',
+      delay: function (el, i) { return 800 + (i * 1000) }
+    })
+    .add({
+      targets: '.letra path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'linear',
+      duration: 4500,
+      delay: function (el, i) { return 800 + (i * 1000) }
+    })
 };
 
 //Vistas
@@ -160,26 +160,26 @@ $('.nav-home').on({
 function anim_lugar01() {
   anim_letras();
   anime.timeline()
-  .add({
-    targets: '.bloque',
-    opacity: [0, 1],
-    duration: 2000,
-    easing: 'linear',
-    delay: 1000
-  })
-  .add({
-    targets: 'h1',
-    width: [0, '100%'],
-    duration: 800,
-    easing: 'easeOutSine',
+    .add({
+      targets: '.bloque',
+      opacity: [0, 1],
+      duration: 2000,
+      easing: 'linear',
+      delay: 1000
+    })
+    .add({
+      targets: 'h1',
+      width: [0, '100%'],
+      duration: 800,
+      easing: 'easeOutSine',
 
-  })
-  .add({
-    targets: 'h1 span',
-    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-    duration: 1000,
-    easing: 'linear'
-  })
+    })
+    .add({
+      targets: 'h1 span',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear'
+    })
     .add({
       targets: '.bloque p, .bloque a',
       opacity: [0, 1],
@@ -318,7 +318,7 @@ function anim_lugar05() {
       duration: 400,
       easing: 'easeOutSine',
       delay: 1000
-    })    
+    })
     .add({
       targets: 'h1 span',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
@@ -348,7 +348,7 @@ function anim_lugar05() {
       delay: function (el, i) {
         return (i * 300);
       }
-    })    
+    })
 }
 //Lugar 06
 function anim_lugar06() {
@@ -367,7 +367,7 @@ function anim_lugar06() {
       color: ['rgba(0,0,0,0)', 'rgba(0,0,0,1)'],
       duration: 1000,
       easing: 'linear'
-    })   
+    })
     .add({
       targets: 'h1 .bg-rojo',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
@@ -381,27 +381,27 @@ function anim_lugar06() {
       translateY: [50, 0],
       duration: 400,
       easing: 'linear',
-      complete: anim_Final      
+      complete: anim_Final
     })
     .add({
       targets: '.aptos-rel',
       marginBottom: [-150, 0],
       duration: 400,
-      easing: 'linear',      
+      easing: 'linear',
     })
     .add({
       targets: '#planta-apto',
       opacity: [0, 1],
       duration: 1000,
       easing: 'linear',
-      offset: '-=200'      
+      offset: '-=200'
     })
     .add({
       targets: '.btn-volver',
       opacity: [0, 1],
       duration: 1000,
       easing: 'linear',
-      offset: '-=400'      
+      offset: '-=400'
     })
 }
 //Galeria
@@ -420,7 +420,7 @@ function anim_galeria() {
       color: ['rgba(0,0,0,0)', 'rgba(0,0,0,1)'],
       duration: 1000,
       easing: 'linear'
-    })   
+    })
     .add({
       targets: 'h1 .bg-rojo',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
@@ -443,28 +443,28 @@ function anim_galeria() {
 function anim_proyecto() {
   anim_letras();
   anime.timeline()
-  .add({
-    targets: 'h1 span',
-    width: [0, '100%'],
-    paddingLeft: [0, 20],
-    duration: 400,
-    easing: 'easeOutSine',
-    delay: 1000
-  })
-  .add({
-    targets: 'h1 .bg-trans',
-    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-    duration: 1000,
-    easing: 'linear',
-    complete: anim_Final
-  })   
-  .add({
-    targets: 'h1 .bg-rojo',
-    color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-    duration: 1000,
-    easing: 'linear',
-    offset: '-=500'
-  })
+    .add({
+      targets: 'h1 span',
+      width: [0, '100%'],
+      paddingLeft: [0, 20],
+      duration: 400,
+      easing: 'easeOutSine',
+      delay: 1000
+    })
+    .add({
+      targets: 'h1 .bg-trans',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear',
+      complete: anim_Final
+    })
+    .add({
+      targets: 'h1 .bg-rojo',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear',
+      offset: '-=500'
+    })
     .add({
       targets: '#proyecto .nav-proyecto',
       duration: 1000,
@@ -472,5 +472,46 @@ function anim_proyecto() {
       easing: 'linear'
 
     });
-
+}
+//Nueva Vista
+function anim_proyVis() {
+  anim_letras();
+  anime.timeline()
+    .add({
+      targets: '.col-full, .bloque',
+      opacity: [0, 1],
+      duration: 2000,
+      easing: 'linear',
+      delay: function (el, i) {
+        return (i * 1000);
+      }
+    })
+    .add({
+      targets: 'h1',
+      width: [0, '100%'],
+      duration: 800,
+      easing: 'easeOutSine',
+    })
+    .add({
+      targets: 'h1 span',
+      paddingLeft: [0, 135],
+      duration: 400,
+      easing: 'easeOutSine'
+    })
+    .add({
+      targets: 'h1 span',
+      color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
+      duration: 1000,
+      easing: 'linear',
+      delay: function (el, i) {
+        return (i * 500);
+      },
+      complete: anim_Final
+    })
+    .add({
+      targets: '.bloque p',
+      opacity: [0, 1],
+      easing: 'easeOutSine',
+      duration: 600
+    })
 }

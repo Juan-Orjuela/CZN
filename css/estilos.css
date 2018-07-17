@@ -409,7 +409,10 @@ h1 .bg-trans , h1 .bg-rojo {
     padding-left: 20px;
     padding-right: 20px;
 }
-
+.col-full {
+    height: 100vh;
+    overflow: hidden;
+}
 /*Formularios*/
 .custom-control {
     display: inline-block;
@@ -1481,4 +1484,44 @@ PROYECTO
     top: initial;
     left: 511px;
     bottom: 24px;
+}
+/*=======
+=========
+NUEVA VISTA
+=========
+=======*/
+#proy-vis #fullwrap {
+    background-image: url('../img/fondo-NUEVA-VISTA.jpg');
+}
+#proy-vis .velo {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+#proy-vis h1 {
+    background: transparent;
+    margin-top: 180px;
+    padding: 0;
+    margin-bottom: 91px;
+}
+#proy-vis h1 span{
+    padding: 0;
+}
+#proy-vis .bloque {
+    background: white;
+    padding: 32px 135px;
+    position: relative;
+    opacity: 0;
+    font-size: 1.5rem;
+}
+#proy-vis .bloque p:last-child {
+    margin-bottom: 0;
+}
+#proy-vis .letra.n {
+    top: 75px;
+    left: initial;
+    right: 135px;
+}
+#proy-vis .bloque,
+#proy-vis .col-full {
+    opacity: 0
 }
