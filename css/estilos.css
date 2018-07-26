@@ -1704,3 +1704,40 @@ html a,
 .ui-slider-pips .ui-slider-pip {
     cursor: url('../img/czn-hover.png'), pointer!important;
 }
+#proy-cez .btn-volver,
+#proy-vip .btn-volver,
+#proy-vis .btn-volver {
+    opacity: 1;
+    color: white;
+    border-color: rgba(255,255,255,.3);
+    box-sizing: border-box;
+}
+#proy-cez .btn-volver:hover,
+#proy-vip .btn-volver:hover,
+#proy-vis .btn-volver:hover {
+    color: #e30e14;
+}
+#proy-cez .btn-volver:before,
+#proy-vip .btn-volver:before,
+#proy-vis .btn-volver:before {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+
+#proy-cez .btn-volver:after,
+#proy-vip .btn-volver:after,
+#proy-vis .btn-volver:after {
+   background: white;
+}
+#proy-cez .btn-volver:hover:before,
+#proy-vip .btn-volver:hover:before,
+#proy-vis .btn-volver:hover:before {
+    border-left: 2px solid #e30e14;
+    border-top: 2px solid #e30e14;
+}
+
+#proy-cez .btn-volver:hover:after,
+#proy-vip .btn-volver:hover:after,
+#proy-vis .btn-volver:hover:after {
+   background: #e30e14;
+}
