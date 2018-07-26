@@ -9,6 +9,13 @@
 </head>
 
 <body id="zonas" class="interna galeria" onload="anim_galeria()">
+        <div id="carga">
+                <div class="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+            </div>
     <div id="fullwrap">
         <div id="outer_containerGal">
             <div id="customScrollBox">
@@ -21,11 +28,11 @@
                         <div class="clear"></div>
                         <a href="img/zc-terraza-dia.jpg" class="thumb_link inicial">
                             <span class="selected"></span>
-                            <img src="img/zct-terraza-dia.jpg" alt="Terraza Cezanne" class="thumb">
+                            <img src="img/zct-terraza-dia.jpg" alt="Terraza día" class="thumb">
                         </a>
                         <a href="img/zc-terraza-noche.jpg" class="thumb_link">
                             <span class="selected"></span>
-                            <img src="img/zct-terraza-noche.jpg" alt="Terraza Cezanne" class="thumb">
+                            <img src="img/zct-terraza-noche.jpg" alt="Terraza noche" class="thumb">
                         </a>
                         <a href="img/zc-gimnasio.jpg" class="thumb_link">
                             <span class="selected"></span>
@@ -52,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div id="bg">
+        <div id="bg" data-slide="0">
             <img src="img/zc-terraza-dia.jpg"  id="bgimg">
             <div id="preloader">
                 <img src="gal/ajax-loader_dark.gif" width="32" height="32" align="absmiddle" /></div>
@@ -60,6 +67,7 @@
                 <img src="gal/sw_arrow_indicator.png" width="50" height="50" />
             </div>
             <div id="nextimage_tip">Click for next image</div>
+            <div id="texto">Terraza día</div>
         </div>
         <!--Elementos comunes-->
         <div id="logo-cusezar">

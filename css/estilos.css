@@ -320,7 +320,7 @@ img {
     text-decoration: none;
     position: relative;
     box-sizing: border-box;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
     border: 3px solid #e30613;
     overflow: hidden;
     white-space: nowrap;
@@ -422,7 +422,7 @@ h1 .bg-trans , h1 .bg-rojo {
     font-family: 'oswaldregular';
     font-size: 2.5rem;
     margin-right: 2rem;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
     padding: 0;
     margin: 0 2rem 0 0;
     text-align: center;
@@ -444,7 +444,7 @@ h1 .bg-trans , h1 .bg-rojo {
 .custom-control-input {
     width: 5rem;
     height: 5rem;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
     left: 0;
 }
 
@@ -453,7 +453,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .custom-control-label {
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
     width: 5rem;
     height: 5rem;
     display: block;
@@ -561,28 +561,30 @@ Inicio
 .nav-home .lugar {
     height: 100%;
     width: 50%;
-    border-right: 4px solid white;
+    border-left: 4px solid white;
     top: 0;
+    right: 0;
 }
 
 .nav-home .proyecto {
-    right: 0;
+    left: 0;
     width: 50%;
     height: 75%;
-    border-bottom: 4px solid white;
+    border-top: 4px solid white;
+    bottom: 0
 }
 
 .nav-home .zonas {
-    left: 50%;
-    bottom: 0;
+    left: 25%;
+    top: 0;
     width: 25%;
     height: 25%;
-    border-right: 4px solid white;
+    border-left: 4px solid white;
 }
 
 .nav-home .ubicacion {
-    right: 0;
-    bottom: 0;
+    left: 0;
+    top: 0;
     width: 25%;
     height: 25%;
 }
@@ -1199,7 +1201,7 @@ DETALLE APTO
     margin: 0;
     background: white;
     position: relative;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
 }
 
 .pag-apto .aptos-rel h3 span {
@@ -1236,7 +1238,7 @@ DETALLE APTO
 .pag-apto .aptos-rel tbody tr:hover {
     background: #e30e14;
     color: white;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
 }
 
 .pag-apto .aptos-rel {
@@ -1405,6 +1407,19 @@ Galeria
 }
 .galeria #bgimg {
     cursor: url('../img/czn-next.png'), auto;
+}
+.galeria #texto {
+    z-index: 5;
+    position: fixed;
+    right: 135px;
+    bottom: 31px;
+    background: #e30e13;
+    padding: 5px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'oswaldregular';
+    letter-spacing: 0.1em;
+
 }
 /*=======
 =========
@@ -1595,7 +1610,7 @@ UBICACION
 }
 #ubicacion .mapa {
     margin: 0 135px 0 0;
-    cursor: pointer;
+    cursor: url('../img/czn-hover.png'), pointer;
     opacity: 0;
 }
 .modal-backdrop,
@@ -1608,4 +1623,84 @@ UBICACION
 #ubicacion h1 span{
     padding: 0;
     color: transparent;
+}
+/*=======
+=========
+CARGA
+=========
+=======*/
+#carga {
+    position: fixed;
+    z-index: 9999999;
+    background: rgba(255, 255, 255, 1);
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+}
+#carga .loader {
+    position: absolute;
+    background: #ffff0000;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    margin: -40px 0 0 -40px;
+}
+#carga .loader span {
+    left: 0;
+    width: 100%;
+    background: #e3061300;
+    height: 29%;
+    position: absolute;
+}
+#carga .loader span:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    background: #e30613;
+    left: -200%;
+    animation: carga 3000ms cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+#carga .loader span:nth-child(2) {
+    top: 34.5%
+}
+#carga .loader span:nth-child(2):before {
+    animation-delay: 200ms;
+}
+#carga .loader span:nth-child(3):before {
+    animation-delay: 400ms;
+}
+#carga .loader span:last-child {
+    bottom: 0
+}
+@keyframes carga {
+ 0 {
+     left: -200%;
+ }
+ 40% {
+    left: 0;
+ }
+ 60% {
+     left: 0;
+ }
+ 100% {
+     left: 100%;
+ }
+}
+/*=======
+=========
+PUNTEROS
+=========
+=======*/
+html,
+.modal-dialog {
+    cursor: url('../img/czn-puntero.png'), auto;
+}
+html a,
+.czn-slider.ui-slider .ui-slider-handle,
+.ui-slider-pips .ui-slider-pip {
+    cursor: url('../img/czn-hover.png'), pointer!important;
 }

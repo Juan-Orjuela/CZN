@@ -93,7 +93,7 @@ function anim_Final() {
       targets: '.btn-nav',
       width: [0, 135],
       easing: 'linear',
-      duration: 400
+      duration: 300
     })
     .add({
       targets: '.btn-nav span',
@@ -107,13 +107,13 @@ function anim_Final() {
     .add({
       targets: '#logo-cusezar',
       width: [0, 135],
-      duration: 400,
+      duration: 300,
       easing: 'linear',
     })
     .add({
       targets: '#logo-cusezar img',
       opacity: [0, 1],
-      duration: 600,
+      duration: 400,
       easing: 'linear',
     });
 }
@@ -131,22 +131,21 @@ function anim_inicio() {
     width: [0, 135],
     duration: 500,
     easing: 'easeOutSine',
-    delay: 2000,
+    delay: 1000,
     complete: anim_Final
   })
     .add({
       targets: '#inicio .logo img',
       opacity: [0, 1],
-      duration: 900
+      duration: 500
     })
     .add({
       targets: '#inicio .nav-home',
-      duration: 1000,
+      duration: 500,
       opacity: [0, 1],
+      offset: '-=500',
       easing: 'linear'
-
     });
-
 }
 $('.nav-home').on({
   mouseenter: function () {
@@ -163,37 +162,37 @@ function anim_lugar01() {
     .add({
       targets: '.bloque',
       opacity: [0, 1],
-      duration: 2000,
+      duration: 1000,
       easing: 'linear',
-      delay: 1000
+      delay: 500
     })
     .add({
       targets: 'h1',
       width: [0, '100%'],
-      duration: 800,
+      duration: 500,
       easing: 'easeOutSine',
 
     })
     .add({
       targets: 'h1 span',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-      duration: 1000,
+      duration: 500,
       easing: 'linear'
     })
     .add({
       targets: '.bloque p, .bloque a',
       opacity: [0, 1],
       easing: 'easeOutSine',
-      duration: 600,
+      duration: 500,
       delay: function (el, i, l) {
-        return (i * 400);
+        return (i * 200);
       },
       complete: anim_Final
     })
     .add({
       targets: '.videowrap',
       opacity: [0, 1],
-      duration: 2000,
+      duration: 1000,
       easing: 'linear',
       offset: '-=1000'
     })
@@ -205,14 +204,14 @@ function anim_lugar02() {
     .add({
       targets: 'h1',
       width: [0, '150%'],
-      duration: 800,
+      duration: 500,
       easing: 'easeOutSine',
 
     })
     .add({
       targets: 'h1 span',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 500,
       easing: 'linear'
     })
     .add({
@@ -237,18 +236,17 @@ function anim_lugar03() {
     .add({
       targets: 'h1 ',
       width: [0, '100%'],
-      duration: 800,
+      duration: 500,
       easing: 'easeOutSine',
       delay: 1000
-
     })
     .add({
       targets: 'h1 span',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-      duration: 1000,
+      duration: 500,
       easing: 'linear',
       delay: function (el, i) {
-        return (i * 400);
+        return (i * 300);
       }
     })
     .add({
@@ -279,13 +277,13 @@ function anim_lugar04() {
       width: [0, 165],
       duration: 400,
       easing: 'easeOutSine',
-      delay: 1000
+      delay: 500
 
     })
     .add({
       targets: 'h1 span',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 500,
       easing: 'linear'
     })
     .add({
@@ -328,13 +326,14 @@ function anim_lugar05() {
     .add({
       targets: '#filtros h2',
       color: ['rgba(0,0,0,0)', 'rgba(0,0,0,1)'],
-      duration: 500,
+      duration: 1000,
+      offset: '-=1000',
       easing: 'linear'
     })
     .add({
       targets: '#filtros .filtros-wrap',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 500,
       easing: 'linear',
       complete: anim_Final
     })
@@ -344,9 +343,9 @@ function anim_lugar05() {
       translateY: [50, 0],
       duration: 400,
       easing: 'easeOutSine',
-      offset: '-=500',
+      offset: '-=1000',
       delay: function (el, i) {
-        return (i * 300);
+        return (i * 200);
       }
     })
 }
@@ -381,25 +380,26 @@ function anim_lugar06() {
       translateY: [50, 0],
       duration: 400,
       easing: 'linear',
+      offset: '-=1000',
       complete: anim_Final
     })
     .add({
       targets: '.aptos-rel',
       marginBottom: [-150, 0],
-      duration: 400,
+      duration: 800,
       easing: 'linear',
     })
     .add({
       targets: '#planta-apto',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 600,
       easing: 'linear',
       offset: '-=200'
     })
     .add({
       targets: '.btn-volver',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 600,
       easing: 'linear',
       offset: '-=400'
     })
@@ -449,27 +449,27 @@ function anim_proyecto() {
       paddingLeft: [0, 20],
       duration: 400,
       easing: 'easeOutSine',
-      delay: 1000
+      delay: 500
     })
     .add({
       targets: 'h1 .bg-trans',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-      duration: 1000,
+      duration: 500,
       easing: 'linear',
       complete: anim_Final
     })
     .add({
       targets: 'h1 .bg-rojo',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-      duration: 1000,
-      easing: 'linear',
-      offset: '-=500'
+      duration: 500,
+      easing: 'linear'
     })
     .add({
       targets: '#proyecto .nav-proyecto',
       duration: 1000,
       opacity: [0, 1],
-      easing: 'linear'
+      easing: 'linear',
+      offset: '-=500'
 
     });
 }
@@ -478,30 +478,28 @@ function anim_proyVis() {
   anim_letras();
   anime.timeline()
     .add({
-      targets: '.col-full, .bloque',
+      targets: '.col-full',
       opacity: [0, 1],
       duration: 2000,
-      easing: 'linear',
-      delay: function (el, i) {
-        return (i * 1000);
-      }
+      easing: 'linear'
     })
     .add({
       targets: 'h1',
       width: [0, '100%'],
-      duration: 800,
+      duration: 500,
       easing: 'easeOutSine',
+      offset: '-=1000'
     })
     .add({
       targets: 'h1 span',
       paddingLeft: [0, 135],
-      duration: 400,
+      duration: 50,
       easing: 'easeOutSine'
     })
     .add({
       targets: 'h1 span',
       color: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
-      duration: 1000,
+      duration: 500,
       easing: 'linear',
       delay: function (el, i) {
         return (i * 500);
@@ -509,10 +507,18 @@ function anim_proyVis() {
       complete: anim_Final
     })
     .add({
+      targets: '.bloque',
+      opacity: [0, 1],
+      duration: 2000,
+      easing: 'linear',
+      offset: '-=1000'
+    })
+    .add({
       targets: '.bloque p',
       opacity: [0, 1],
       easing: 'easeOutSine',
-      duration: 600
+      duration: 500,
+      offset: '-=500'
     })
 }
 //Ubicacion
@@ -548,3 +554,9 @@ function anim_ubicacion() {
       duration: 1200
     })
 }
+$(document).ready(function() {
+  setTimeout(function(){
+      $('#carga').fadeOut();
+  }, 200);
+
+});

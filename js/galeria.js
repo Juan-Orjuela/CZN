@@ -8,6 +8,7 @@ $outer_containerGal = $("#outer_containerGal");
 $outer_containerGal_a = $("#outer_containerGal a.thumb_link");
 $toolbar = $("#toolbar");
 $nextimage_tip = $("#nextimage_tip");
+$texto = $('#texto');
 
 $(window).load(function () {
   $toolbar.data("imageViewMode", $defaultViewMode); //default view mode
@@ -163,6 +164,7 @@ function cambiarFondo(event) {
   primeraVez++;
   event.preventDefault();
   var $this = this;
+  var mini = $(this).children(".selected + img").attr('alt');
   $bgimg.css("display", "none");
   $preloader.fadeIn("fast"); //show preloader
   //style clicked thumbnail
@@ -177,6 +179,7 @@ function cambiarFondo(event) {
   itemIndex = getIndex($this); //get clicked item index
   lastItemIndex = ($outer_containerGal_a.length) - 1; //get last item index
   $bgimg.attr("src", "").attr("src", $this); //switch image
+  $texto.text(mini);
 }
 //Clicking on thumbnail changes the background image
 $outer_containerGal_a.click(cambiarFondo);
@@ -188,10 +191,14 @@ $bgimg.click(function (event) {
     $this.css("display", "none");
     $preloader.fadeIn("fast"); //show preloader
     $($outer_containerGal.data("selectedThumb")).children(".selected").css("display", "none"); //deselect thumb
+    var mini = $($outer_containerGal.data("selectedThumb")).next().children(".selected + img").attr('alt');
     if ($bg.data("lastImageReached") != "Y") {
       $($outer_containerGal.data("selectedThumb")).next().children(".selected").css("display", "block"); //select new thumb
+      $texto.text(mini);
     } else {
       $outer_containerGal_a.first().children(".selected").css("display", "block"); //select new thumb - first
+      mini = $outer_containerGal_a.first().children(".selected + img").attr('alt');
+      $texto.text(mini);
     }
     //store new selected thumb
     var selThumb = $outer_containerGal.data("selectedThumb");
