@@ -437,7 +437,8 @@ h1 .bg-trans , h1 .bg-rojo {
     display: none;
 }
 
-.custom-radio .custom-control-input:checked~.custom-control-label {
+.custom-radio .custom-control-input:checked~.custom-control-label,
+.custom-checkbox .custom-control-input:checked~.custom-control-label  {
     background-color: #e30e13
 }
 
@@ -1009,7 +1010,7 @@ RESULTADOS
     padding: 0.8rem 1rem 0.8rem;
     font-family: 'oswaldregular';
     font-size: 1.25rem;
-    display: inline-block;
+    display: block;
     float: left;
     border-right: 2px solid white;
     text-align: center
@@ -1063,7 +1064,8 @@ RESULTADOS
     opacity: 1;
 }
 
-#filtros .custom-radio .custom-control-input:checked~.custom-control-label {
+#filtros .custom-radio .custom-control-input:checked~.custom-control-label,
+#filtros .custom-checkbox .custom-control-input:checked~.custom-control-label {
     color: white;
     border-color: #e30e14;
 }
@@ -1118,7 +1120,20 @@ RESULTADOS
 #filtros .btn {
     margin-top: 80px;
 }
-
+#filtros #rango-area h3 {
+    margin: 120px 0 15px;
+}
+.no-resultados {
+    color: white;
+    font-family: 'oswaldregular';
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    transform: translateY(25vh);
+}
+.no-resultados.ocultar {
+    display: none;
+}
 /*=======
 =========
 Lugar 06

@@ -38,7 +38,7 @@
                   <label class="custom-control-label" for="habitaciones1">1</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input">
+                  <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input" checked>
                   <label class="custom-control-label" for="habitaciones2">2</label>
                 </div>
                 <div class="custom-control custom-radio">
@@ -55,18 +55,19 @@
               <div class="czn-slider" id="area-slider"></div>
             </div>
             <!--Vista-->
+            <!--Aca funcionan como checkbox, siempre debe haber al menos uno seleccionado-->
             <div id="vista">
               <h3>Vista</h3>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="vista1" name="vista" class="custom-control-input vista-btn" data-vista="vsur">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="vista1" name="vista" class="custom-control-input vista-btn" data-vista="vsur">
                 <label class="custom-control-label" for="vista1">SUR</label>
               </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="vista2" name="vista" class="custom-control-input vista-btn" data-vista="vocc">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="vista2" name="vista" class="custom-control-input vista-btn" data-vista="vocc" checked>
                 <label class="custom-control-label" for="vista2">OCCIDENTE</label>
               </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="vista3" name="vista" class="custom-control-input vista-btn" data-vista="vnor">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="vista3" name="vista" class="custom-control-input vista-btn" data-vista="vnor">
                 <label class="custom-control-label" for="vista3">NORTE</label>
               </div>
             </div>
@@ -77,14 +78,14 @@
               <div class="czn-slider" id="pisos-slider"></div>
             </div>-->
             <!--Botón aplicar filtros-->
-            <a href="#" class="btn btn-rojo">
+            <!--<a href="#" class="btn btn-rojo">
               <span class="text">
                 <span class="inner">ACTUALIZAR</span>
               </span>
               <span class="hover">
                 <span class="inner">ACTUALIZAR</span>
               </span>
-            </a>
+            </a>-->
           </div>
 
         </div>
@@ -95,6 +96,10 @@
           </h1>
           <div id="aptos">
             <div class="row">
+              <!--SI NO HAY RESULTADOS-->
+              <div class="no-resultados ocultar">
+                No hay resultados para tu búsqueda
+              </div>
               <!--ESTO ES UN APTO-->
               <div class="col-4 apto">
                 <a href="lugar_06.html" class="apto-wrap">
