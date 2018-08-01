@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/jquery-ui.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
-  <link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
-  <link rel="stylesheet" href="css/area-slider.css">
   <title>Cezanne | Un proyecto de Cusezar</title>
 </head>
 
@@ -26,48 +23,43 @@
   <div id="fullwrap">
     <div class="velo"></div>
 
-    <div class="letra n n1">
-      <svg version="1.1" baseProfile="basic" id="letra-n1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" viewBox="0 0 381.7 404.2" xml:space="preserve">
-        <style type="text/css">
-          .st0 {
-            fill: none;
-            stroke: #E30613;
-            stroke-miterlimit: 10;
-          }
-        </style>
-        <g>
-          <path class="st0" d="M0.5,0.5h104.3l165.9,213.1V0.5h110.6v403.2h-97.9L111.1,182.5v221.2H0.5V0.5z" />
-        </g>
-      </svg>
-    </div>
-    <div class="letra n n2">
-      <svg version="1.1" baseProfile="basic" id="letra-n2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" viewBox="0 0 381.7 404.2" xml:space="preserve">
-        <style type="text/css">
-          .st1 {
-            fill: none;
-            stroke: #E30613;
-            stroke-miterlimit: 10;
-          }
-        </style>
-        <g>
-          <path class="st1" d="M0.5,0.5h104.3l165.9,213.1V0.5h110.6v403.2h-97.9L111.1,182.5v221.2H0.5V0.5z" />
-        </g>
-      </svg>
-    </div>
     <div class="container-fluid">
       <div class="row no-gutters">
-        <div class="col-8">
-          <div class="img-lugar-2"></div>
-        </div>
-        <div class="col-4">
-
-          <h1><span>¿QUÉ ÁREA BUSCAS?</span></h1>
-          <div id="rango-area">
-            <div class="czn-label" id="metros">Entre 50 y 80 MT<span>2</span></div>
-            <div class="czn-slider" id="area-slider"></div>
+        <div class="col-5">
+          <h1>
+            <span class="bg-trans">¿NÚMERO DE</span>
+            <span class="bg-rojo">HABITACIONES?</span>
+          </h1>
+          <div id="habitaciones">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="habitaciones1" name="habitaciones" class="custom-control-input">
+              <label class="custom-control-label" for="habitaciones1">1</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input">
+              <label class="custom-control-label" for="habitaciones2">2</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="habitaciones3" name="habitaciones" class="custom-control-input">
+              <label class="custom-control-label" for="habitaciones3">3</label>
+            </div>
           </div>
+          <div class="letra a">
+            <svg version="1.1" baseProfile="basic" id="letra-n" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 450.4 405.2" xml:space="preserve">
+              <style type="text/css">
+                .st0 {
+                  fill: none;
+                  stroke: #E30613;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+              <path class="st0" d="M171.6,0.5h107.2l170.8,404.2H330.4L301.2,333H146.4l-28.7,71.7H0.8L171.6,0.5z M269.1,246.5l-44.7-114.1
+	l-45.3,114.1H269.1z" />
+            </svg>
+          </div>
+        </div>
+        <div class="col-7">
           <a href="lugar_03.html" class="btn btn-blanco">
             <span class="text">
               <span class="inner">CONTINUAR</span>
@@ -83,7 +75,6 @@
         <img src="img/logo-cusezar-temp.png" alt="Cusezar">
       </div>
       <div class="linea linea-v linea-izq"></div>
-      <div class="linea linea-v linea-cen"></div>
       <div class="linea linea-v linea-der"></div>
     </div>
     <a href="#" class="btn-nav">
@@ -109,7 +100,6 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/jquery-ui-slider-pips.js"></script>
   <script src="js/anime.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/interactividad.js"></script>

@@ -689,84 +689,12 @@ Lugar 01
     top: 70px;
     left: 500px;
 }
-
 /*=======
 =========
 Lugar 02
 =========
 =======*/
-#lugar_02 #fullwrap {
-    background-image: url('../img/fondo-lugar_02-color.jpg');
-}
-
-#lugar_02 .img-lugar-2 {
-    margin-top: 135px;
-    background: url('../img/fondo-lugar_02-color.jpg') no-repeat -135px -135px;
-    height: 600px;
-    height: calc(100vh - 135px);
-}
-
 #lugar_02 h1 {
-    margin-top: 270px;
-    width: 0;
-    margin-left: -50%;
-    height: 92px;
-}
-
-#lugar_02 h1 span {
-    padding-left: 20px;
-    opacity: 0;
-}
-
-#lugar_02 #rango-area {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 135px;
-    margin-bottom: 135px;
-    padding: 60px 30px;
-    position: relative;
-    opacity: 0;
-}
-
-#lugar_02 .btn {
-    float: right;
-    clear: all;
-}
-
-#lugar_02 .letra.n {
-    top: 75px;
-    left: 70px
-}
-
-#lugar_02 .letra.n2 {
-    left: 550px
-}
-
-.czn-label {
-    color: white;
-    font-family: 'fira_sansbold';
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-#lugar_02 #metros {
-    margin-bottom: 30px;
-    font-size: 1.5rem;
-}
-
-#lugar_02 #metros span {
-    font-size: .8em;
-    position: relative;
-    top: -.5em;
-    left: .1em;
-}
-
-/*=======
-=========
-Lugar 03
-=========
-=======*/
-#lugar_03 h1 {
     background: transparent;
     margin-top: 179px;
     padding: 0;
@@ -782,38 +710,110 @@ Lugar 03
     background: #e30e13;
 }
 
-#lugar_03 #fullwrap {
-    background-image: url('../img/fondo-lugar_03.jpg');
+#lugar_02 #fullwrap {
+    background-image: url('../img/fondo-lugar_02.jpg');
 }
 
-#lugar_03 .velo {
+#lugar_02 .velo {
     opacity: 0;
 }
 
-#lugar_03 #habitaciones {
+#lugar_02 #habitaciones {
     margin-top: 135px;
 }
 
-#lugar_03 .btn {
+#lugar_02 .btn {
     float: right;
     margin-top: 822px;
     margin-top: 80.5vh;
 }
 
-#lugar_03 .row > div:first-child {
+#lugar_02 .row > div:first-child {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     min-height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-#lugar_03 .letra.a {
+#lugar_02 .letra.a {
     right: 0;
     left: initial;
     bottom: 30px;
     top: initial;
     transform: translateX(50%)
 }
+/*=======
+=========
+Lugar 03
+=========
+=======*/
+#lugar_03 #fullwrap {
+    background-image: url('../img/fondo-lugar_03-color.jpg');
+}
+
+#lugar_03 .img-lugar-2 {
+    margin-top: 135px;
+    background: url('../img/fondo-lugar_03-color.jpg') no-repeat -135px -135px;
+    height: 600px;
+    height: calc(100vh - 135px);
+}
+
+#lugar_03 h1 {
+    margin-top: 270px;
+    width: 0;
+    margin-left: -50%;
+    height: 92px;
+}
+
+#lugar_03 h1 span {
+    padding-left: 20px;
+    opacity: 0;
+}
+
+#lugar_03 #rango-area {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 135px;
+    margin-bottom: 135px;
+    padding: 60px 30px;
+    position: relative;
+    opacity: 0;
+}
+
+#lugar_03 .btn {
+    float: right;
+    clear: all;
+}
+
+#lugar_03 .letra.n {
+    top: 75px;
+    left: 70px
+}
+
+#lugar_03 .letra.n2 {
+    left: 550px
+}
+
+.czn-label {
+    color: white;
+    font-family: 'fira_sansbold';
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#lugar_03 #metros {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+#lugar_03 #metros span {
+    font-size: .8em;
+    position: relative;
+    top: -.5em;
+    left: .1em;
+}
+
+
 
 /*=======
 =========
@@ -1001,18 +1001,26 @@ RESULTADOS
     padding: 1rem 1rem 0.8rem;
     border-bottom: 2px solid white;
     letter-spacing: 0.075em;
+    text-align: center
 }
 
-#aptos .apto-nombre ~ div {
-    width: 49.1%;
+#aptos .apto-info div {
+    width: 33.333333%;
     padding: 0.8rem 1rem 0.8rem;
     font-family: 'oswaldregular';
     font-size: 1.25rem;
     display: inline-block;
-}
-
-#aptos .apto-nombre + div {
+    float: left;
     border-right: 2px solid white;
+    text-align: center
+}
+#aptos .apto-info {
+    clear: both;
+    min-height: 54px;
+}
+#aptos .apto-info .apto-ps {
+    border-right: none;
+
 }
 
 /*Menu filtros*/
@@ -1082,7 +1090,7 @@ RESULTADOS
     margin: 40px 0 15px;
 }
 
-#filtros #rango-area h3 {
+#filtros #habitaciones h3 {
     margin-top: 0;
 }
 

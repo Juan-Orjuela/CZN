@@ -197,40 +197,9 @@ function anim_lugar01() {
       offset: '-=1000'
     })
 }
+
 //Lugar 02
 function anim_lugar02() {
-  anim_letras();
-  anime.timeline()
-    .add({
-      targets: 'h1',
-      width: [0, '150%'],
-      duration: 500,
-      easing: 'easeOutSine',
-
-    })
-    .add({
-      targets: 'h1 span',
-      opacity: [0, 1],
-      duration: 500,
-      easing: 'linear'
-    })
-    .add({
-      targets: '#rango-area',
-      opacity: [0, 1],
-      duration: 1000,
-      easing: 'linear'
-    })
-    .add({
-      targets: 'a',
-      translateX: [-100, 0],
-      opacity: [0, 1],
-      easing: 'easeOutSine',
-      duration: 400,
-      complete: anim_Final
-    });
-}
-//Lugar 03
-function anim_lugar03() {
   anim_letras();
   anime.timeline()
     .add({
@@ -258,6 +227,38 @@ function anim_lugar03() {
       delay: function (el, i) {
         return (i * 300);
       }
+    })
+    .add({
+      targets: 'a',
+      translateX: [-100, 0],
+      opacity: [0, 1],
+      easing: 'easeOutSine',
+      duration: 400,
+      complete: anim_Final
+    });
+}
+//Lugar 03
+function anim_lugar03() {
+  anim_letras();
+  anime.timeline()
+    .add({
+      targets: 'h1',
+      width: [0, '150%'],
+      duration: 500,
+      easing: 'easeOutSine',
+
+    })
+    .add({
+      targets: 'h1 span',
+      opacity: [0, 1],
+      duration: 500,
+      easing: 'linear'
+    })
+    .add({
+      targets: '#rango-area',
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'linear'
     })
     .add({
       targets: 'a',

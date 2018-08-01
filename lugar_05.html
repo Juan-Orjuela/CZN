@@ -15,14 +15,14 @@
   <title>Cezanne | Un proyecto de Cusezar</title>
 </head>
 
-<body id="lugar_05" class="interna"  onload="anim_lugar05()">
-    <div id="carga">
-        <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+<body id="lugar_05" class="interna" onload="anim_lugar05()">
+  <div id="carga">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
   <div id="fullwrap" data-mirar="vocc">
     <div class="velo"></div>
     <div class="container-fluid">
@@ -30,6 +30,22 @@
         <div id="filtros" class="col">
           <h2>FILTRAR RESULTADOS</h2>
           <div class="filtros-wrap">
+            <!--Habitaciones-->
+            <div id="habitaciones">
+                <h3>Habitaciones</h3>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="habitaciones1" name="habitaciones" class="custom-control-input">
+                  <label class="custom-control-label" for="habitaciones1">1</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input">
+                  <label class="custom-control-label" for="habitaciones2">2</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="habitaciones3" name="habitaciones" class="custom-control-input">
+                  <label class="custom-control-label" for="habitaciones3">3</label>
+                </div>
+              </div>
             <!--Rango de área-->
             <div id="rango-area">
               <h3>Área</h3>
@@ -37,22 +53,6 @@
                 <span>2</span>
               </div>
               <div class="czn-slider" id="area-slider"></div>
-            </div>
-            <!--Habitaciones-->
-            <div id="habitaciones">
-              <h3>Habitaciones</h3>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="habitaciones1" name="habitaciones" class="custom-control-input">
-                <label class="custom-control-label" for="habitaciones1">1</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="habitaciones2" name="habitaciones" class="custom-control-input">
-                <label class="custom-control-label" for="habitaciones2">2</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="habitaciones3" name="habitaciones" class="custom-control-input">
-                <label class="custom-control-label" for="habitaciones3">3</label>
-              </div>
             </div>
             <!--Vista-->
             <div id="vista">
@@ -71,18 +71,18 @@
               </div>
             </div>
             <!--Piso-->
-            <div id="rango-piso">
+            <!--<div id="rango-piso">
               <h3>Piso</h3>
               <div class="czn-label" id="pisos">Entre 10 y 25</div>
               <div class="czn-slider" id="pisos-slider"></div>
-            </div>
+            </div>-->
             <!--Botón aplicar filtros-->
             <a href="#" class="btn btn-rojo">
               <span class="text">
-                <span class="inner">APLICAR</span>
+                <span class="inner">ACTUALIZAR</span>
               </span>
               <span class="hover">
-                <span class="inner">APLICAR</span>
+                <span class="inner">ACTUALIZAR</span>
               </span>
             </a>
           </div>
@@ -103,10 +103,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -118,10 +123,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -133,10 +143,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12 - 18</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -148,10 +163,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -163,10 +183,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -178,10 +203,15 @@
                   </div>
                   <div class="info">
                     <div class="apto-nombre">Apto de 2 habitaciones</div>
-                    <div class="apto-ac">AC:
-                      <span>54.2</span> mt2</div>
-                    <div class="apto-ap">AP:
-                      <span>50.1</span> mt2</div>
+                    <div class="apto-info">
+                      <div class="apto-ac">AC:
+                        <span>54.2</span> mt2</div>
+                      <div class="apto-ap">AP:
+                        <span>50.1</span> mt2</div>
+                      <div class="apto-ps">PISO:
+                        <span>12</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -191,7 +221,7 @@
       </div>
       <div class="linea linea-v linea-der"></div>
     </div>
-    
+
     <a href="#" class="btn-nav">
       <div class="burguer">
         <span></span>
@@ -200,11 +230,11 @@
       </div>
     </a>
     <nav id="nav-main">
-        <a href="index.html">INICIO</a>
-        <a href="ubicacion.html">UBICACIÓN</a>
-        <a href="proyecto.html">EL PROYECTO</a>
-        <a href="zonas.html">ZONAS COMUNES</a>
-        <a href="lugar_01.html">TU LUGAR IDEAL</a>
+      <a href="index.html">INICIO</a>
+      <a href="ubicacion.html">UBICACIÓN</a>
+      <a href="proyecto.html">EL PROYECTO</a>
+      <a href="zonas.html">ZONAS COMUNES</a>
+      <a href="lugar_01.html">TU LUGAR IDEAL</a>
     </nav>
     <div id="hide-nav"></div>
     <div class="linea linea-h linea-h1"></div>
